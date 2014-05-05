@@ -6,47 +6,6 @@ Barra Meta Navegación para servicios digitales e[ad]
 *
 */
 
-
-/*Pantalla extra pequeña*/
-
-@media(max-width: @screen-xs-max){
-
-	.nav{
-		width: 200px;
-		margin: 0 auto;
-		}
-
-}
-
-/*Pantalla pequeña*/
-
-@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
-
-	}
-
-
-/*Pantalla mediana*/
-
-@media (min-width: @screen-md) and (max-width: @screen-md-max){
-
-	.nav{
-		width: 1100px;
-		margin: 0 auto;
-	}
-
-}
-
-/*Pantalla grande*/
-
-@media (min-width: @screen-lg){
-
-
-}
-
-/*
-Meta Barra de Navegación
-*/
-
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 	margin:0 auto;
@@ -54,7 +13,16 @@ body{
 
 .metabarra{
     width: 100%;
-	height: 40px;
+	height: 38px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: rgba(25, 26, 25, 1);
+	}
+
+.metabarramovil{
+	display: none;
+    width: 100%;
+	height: 38px;
 	margin: 0 auto;
 	padding: 0;
 	background-color: rgba(25, 26, 25, 1);
@@ -62,45 +30,51 @@ body{
 
 nav{
 	margin: 0 auto;
-	height: 40px;
+	height: 38px;
 	padding: 0;
-	width: 1100px;
+	width: 1140px;
     }
 
-ul{
+ul.menudesktop{
+	margin: 0 auto;
+	padding: 0;
+	height: 38px;
+    }
+
+ul.menumovil{
+    display: none;
 	margin: 0;
 	padding: 0;
-	height: 20px;
-    }
+	height: 38px;			
+	}
 
 li{
 	width: auto;
+	height:38px;
 	float: left;
     list-style: none;
     text-align: center;
 	display: inline-block;
     list-style-type: none;
     margin: 0;
-    padding: 10px 25px;
+    padding: 10px 20px;
     list-style-type: none;
     }
 
-.ead{
+li.ead{
 	width:70px;
 	text-align: left;
-	padding: 6px 0;
+	padding: 6px 0 0 0;
     }
 
-.icono{
-	float:left;
-}
-
-.separador{
+li.separador{
 	float: right;
 	color: rgba(255, 255, 255, 1);
+	padding: 10px 0;
+	margin:0;
     }
 
-.derecha{
+li.iniciarsesion{
 	float: right;
     list-style: none;
     text-align: right;
@@ -108,14 +82,66 @@ li{
     list-style-type: none;
     display: inline;
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 10px;
     list-style-type: none;
-    border:1px solid white;
+    }
+
+li.buscador{
+	float: right;
+    list-style: none;
+    text-align: right;
+	display: inline;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0px 10px;
+    list-style-type: none;
+    }
+
+#search-form{
+	float:left;
+	margin-top: 0;
+	height: 38px;
+	padding: 0;
+    }
+
+input[type="search"]{
+	display: inline-block;
+    background: rgba(69, 71, 71, 0.7);
+    width: 180px;
+    border: none;
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 1);
+    height: 38px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    }
+
+input[type="search"]:focus{
+	outline: none;
+    }
+
+button{
+	display: inline-block;
+	height: 38px;
+    margin: 0 auto;
+    background-color: rgba(25, 26, 25, 1);
+    padding: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+    outline: none;
+    }
+
+button:hover{
+	background-color: rgba(199, 81, 77, 1);
     }
 
 a{
 	text-decoration: none;
 	display: inline-block;
+	height:38px;
     margin: 0 auto;
     padding: 0;
     color: rgba(255, 255, 255, 1);
@@ -123,13 +149,44 @@ a{
     font-weight: 300;
     }
 
-.logoead{
-	color:rgba(199, 81, 77, 1);
-	font-size: 18px;
-	font-weight: 600;
+a:hover{
+	color: rgba(193, 194, 194, 1);
     }
 
-p{
+a.active{
+	background-image: url(img/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 67%;
+	background-size: 14px;
+    }
+
+a.logoead{
+	color: rgba(199, 81, 77, 1);
+	font-size: 18px;
+	font-weight: 500;
+    }
+
+a.logoead:hover{
+	color: rgba(199, 81, 77, 1);
+	font-size: 18px;
+	font-weight: 500;
+    }
+
+a.logoead-active{
+	color: rgba(199, 81, 77, 1);
+	font-size: 18px;
+	font-weight: 500;
+	background-image: url(img/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 80%;
+	background-size: 16px;
+    }
+
+a.logoead-active:hover{
+	color: rgba(180, 81, 90, 10);
+    }
+
+span{
 	margin: 0 auto;
     padding: 0;
     text-align: center;
@@ -141,11 +198,116 @@ p{
 img{
 	margin:auto;
 	float:left;
-	height:20px;
-	padding: 0px 5px;
+	height:15px;
+	padding: 2px 7px;
     }
 
-border:1px solid white;
+
+			/*Pantalla mediana*/
+
+			@media screen and (min-width: 992px) and (max-width: 1199px){
+
+			nav{
+				margin: 0 auto;
+				height: 38px;
+				padding: 0;
+				width: 952px;
+			    }
+
+			input[type="search"]{
+				display: inline-block;
+			    background: rgba(69, 71, 71, 0.7);
+			    width: 160px;
+			    border: none;
+			    font-size: 12px;
+			    font-weight: 100;
+			    color: rgba(255, 255, 255, 1);
+			    height: 38px;
+			    margin: 0 auto;
+			    padding: 10px 10px;
+			    }
+
+			}
+
+								/*Pantalla pequeña*/
+
+								@media screen and (min-width: 768px) and (max-width: 991px){
+
+								.metabarra{
+									display: none;
+								    width: 100%;
+									height: 38px;
+									margin: 0 auto;
+									padding: 0;
+									background-color: rgba(25, 26, 25, 1);
+									}
+
+								.metabarramovil{
+									display: inline-block;
+								    width: 100%;
+									height: 38px;
+									margin: 0 auto;
+									padding: 0;
+									background-color: rgba(25, 26, 25, 1);
+									}
+
+							    nav.navmovil{
+									margin: 0 auto;
+									height: 38px;
+									padding: 0;
+									width: 728px;
+								    }
+
+							    ul.menumovil{
+							    	display: inline-block;
+							    	margin: 0 auto;
+									padding: 0;
+									height: 38px;		
+								    }
+
+								li.movil{
+									width: auto;
+									height:38px;
+									float: left;
+								    list-style: none;
+								    text-align: center;
+									display: inline-block;
+								    list-style-type: none;
+								    margin: 0;
+								    padding: 10px 20px;
+								    list-style-type: none;
+								    border:1px solid white;
+								    }
+
+								ul.dropdown{
+									display:none;
+									}
+
+							    li.movil:hover > ul.dropdown {
+							    	display: inline-block;
+							   	 	}
+
+							   	li.eadmovil{
+								width:70px;
+								text-align: left;
+								padding: 6px 0;
+							    }
+
+								}
+
+
+													/*Pantalla extra pequeña (Móvil)*/
+
+													@media screen and (min-width: 5px) and (max-width: 767px){
+
+														nav{
+															margin: 0 auto;
+															height: 38px;
+															padding: 0;
+															width: 300px;
+													    	}
+
+													}
 
 /**
 *
@@ -153,4 +315,7 @@ Estilos Gráficos
 Barra Meta Navegación para servicios digitales e[ad]
 *
 */
+
+
+border:1px solid white;
    
