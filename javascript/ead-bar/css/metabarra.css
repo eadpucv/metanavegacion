@@ -147,7 +147,6 @@ input[type="search"]{
     height: auto;
     margin: 0 auto;
     padding: 10px 10px;
-
     }
 
 input[type="search"]:focus{
@@ -203,6 +202,13 @@ li.iniciarsesion{
     list-style-type: none;
     }
 
+/*--------------------Dropdown--------------------*/
+
+li.ead-bar-dropdown ul {position:absolute;width:50px;background:black;}
+li.ead-bar-dropdown ul li a {display:block;color:#FFF;}
+li.ead-bar-dropdown ul.fallback {display:none;}
+li.ead-bar-dropdown:hover ul.fallback {display:block;}
+
 /*--------------------Íconos--------------------*/
 
 img.icono{
@@ -218,6 +224,12 @@ img.icono{
 
 			@media screen and (min-width: 992px) and (max-width: 1199px){
 
+			nav.web{
+				margin: 0 auto;
+				height: 38px;
+				padding: 0;
+				width: 952px;
+			    }
 
 			}
 
@@ -225,6 +237,25 @@ img.icono{
 
 								@media screen and (min-width: 768px) and (max-width: 991px){
 
+								nav.web{
+									margin: 0 auto;
+									height: 38px;
+									padding: 0;
+									width: 728px;
+								    }
+
+								input[type="search"]{
+									display: inline-block;
+								    background: rgba(69, 71, 71, 0.7);
+								    width: 180px;
+								    border: none;
+								    font-size: 12px;
+								    font-weight: 100;
+								    color: rgba(255, 255, 255, 1);
+								    height: auto;
+								    margin: 0 auto;
+								    padding: 10px 10px;
+								    }
 
 								}
 
@@ -236,11 +267,6 @@ img.icono{
 
 													}
 
-/** DropDown */
-li.ead-bar-dropdown ul {position:absolute;width:50px;background:black;}
-li.ead-bar-dropdown ul li a {display:block;color:#FFF;}
-li.ead-bar-dropdown ul.fallback {display:none;}
-li.ead-bar-dropdown:hover ul.fallback {display:block;}
 	
 /**
 *
