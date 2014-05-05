@@ -19,11 +19,17 @@
 
 	<div class='metabarra'>
 		<nav>
-			 <ul class='menudesktop'>
-			 	<li class='ead'><a class='logoead active' href='#' id="link_ead">e[ad]</a></li>
-			 	<li><a href='#' class="inactive" id="link_casiopea"><img src='https://s3.amazonaws.com/Ead/ead_bar_images/casiopea.svg'>Wiki Casiopea</a></li>
-			 	<li><a href='#' class="inactive" id="link_travesias"><img src='https://s3.amazonaws.com/Ead/ead_bar_images/travesia.svg'>Travesías</a></li>
-			 	<li class='iniciarsesion'><a href='#'><img src='https://s3.amazonaws.com/Ead/ead_bar_images/perfil.svg'>Iniciar sesión</a></li>
+			<ul class='menudesktop'>
+			 	<li class='ead ead_bar'><a class='link logoead active' href='#' id="link_ead">e[ad]</a></li>
+			 	<li class='ead_bar'><a href='#' class="link inactive" id="link_casiopea"><img src='https://s3.amazonaws.com/Ead/ead_bar_images/casiopea.svg'>Wiki Casiopea</a></li>
+			 	<li class='ead_bar'><a href='#' class="link inactive" id="link_travesias"><img src='https://s3.amazonaws.com/Ead/ead_bar_images/travesia.svg'>Travesías</a></li>
+			 	<li class='ead_bar iniciarsesion ead-bar-dropdown'>
+			 		<a href='#' class="link"><img src='https://s3.amazonaws.com/Ead/ead_bar_images/perfil.svg'>Iniciar sesión</a>
+			 	   <ul class="fallback">
+        				<li><a href="#">Sub-Link 1</a></li>
+        				<li><a href="#">Sub-Link 2</a></li>
+        			</ul>
+        		</li>
 			 	<li class='separador'><span>|</span></li>
 			 	<li class='buscador'>
 			 		<form id='search-form'>

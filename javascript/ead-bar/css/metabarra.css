@@ -48,18 +48,18 @@ ul.menumovil{
 	height: 38px;			
 	}
 
-li{
+li.ead_bar{
 	width: auto;
 	height:38px;
 	float: left;
-    list-style: none;
-    text-align: center;
+   list-style: none;
+   text-align: center;
 	display: inline-block;
-    list-style-type: none;
-    margin: 0;
-    padding: 10px 20px;
-    list-style-type: none;
-    }
+   list-style-type: none;
+   margin: 0;
+   padding: 10px 20px;
+   list-style-type: none;
+}
 
 li.ead{
 	width:70px;
@@ -76,15 +76,15 @@ li.separador{
 
 li.iniciarsesion{
 	float: right;
-    list-style: none;
-    text-align: right;
+   list-style: none;
+   text-align: right;
 	display: inline;
-    list-style-type: none;
-    display: inline;
-    margin: 0;
-    padding: 10px 10px;
-    list-style-type: none;
-    }
+   list-style-type: none;
+   display: inline;
+   margin: 0;
+   padding: 10px 10px;
+   list-style-type: none;
+}
 
 li.buscador{
 	float: right;
@@ -139,7 +139,7 @@ button:hover{
 	background-color: rgba(199, 81, 77, 1);
     }
 
-a{
+.link{
 	text-decoration: none;
 	display: inline-block;
 	height:38px;
@@ -150,11 +150,9 @@ a{
     font-weight: 300;
     }
 
-a:hover{
+.link a:hover{
 	color: rgba(193, 194, 194, 1);
     }
-
-
 
 a.logoead{
 	color: rgba(199, 81, 77, 1);
@@ -176,7 +174,7 @@ a.active{
 
 a.logoead-active:hover{
 	color: rgba(180, 81, 90, 10);
-    }
+   }
 
 span{
 	margin: 0 auto;
@@ -185,14 +183,14 @@ span{
     color: rgba(255, 255, 255, 1);
     font-size: 14px;
     font-weight: 300;
-    }
+   }
 
 img{
 	margin:auto;
 	float:left;
 	height:15px;
 	padding: 2px 7px;
-    }
+   }
 
 
 			/*Pantalla mediana*/
@@ -301,13 +299,15 @@ img{
 
 													}
 
+/** DropDown */
+li.ead-bar-dropdown ul {position:absolute;width:50px;background:black;}
+li.ead-bar-dropdown ul li a {display:block;color:#FFF;}
+li.ead-bar-dropdown ul.fallback {display:none;}
+li.ead-bar-dropdown:hover ul.fallback {display:block;}
+	
 /**
 *
 Estilos Gráficos
 Barra Meta Navegación para servicios digitales e[ad]
 *
-*/
-
-
-border:1px solid white;
-   
+*/   
