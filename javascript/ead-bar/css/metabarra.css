@@ -39,6 +39,14 @@ nav.web{
 	width: 1140px;
     }
 
+nav.movil{
+	display: none;
+	margin: 0 auto;
+	height: 38px;
+	padding: 0;
+	width: 260px;
+    }
+
 ul.menuweb{
 	margin: 0 auto;
 	padding: 0;
@@ -262,8 +270,27 @@ img.icono{
 
 													/*Pantalla extra pequeña (Móvil)*/
 
-													@media screen and (min-width: 5px) and (max-width: 767px){
+													@media screen and (min-width: 300px) and (max-width: 767px){
 
+													.metabarra{
+														display: none;
+														font-family: 'Source Sans Pro', sans-serif;
+													    width: 100%;
+														height: 38px;
+														margin: 0 auto;
+														padding: 0;
+														background-color: rgba(25, 26, 25, 1);
+														}
+
+													.metabarramovil{
+														display: inline-block;
+														font-family: 'Source Sans Pro', sans-serif;
+													    width: 100%;
+														height: 38px;
+														margin: 0 auto;
+														padding: 0;
+														background-color: rgba(25, 26, 25, 1);
+														}
 
 													}
 
