@@ -6,12 +6,64 @@ Barra Meta Navegación para servicios digitales e[ad]
 *
 */
 
+/*-----------RESET------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*-----------Estilos Gráficos------------*/
+
 body{
-	font-family: 'Source Sans Pro', sans-serif;
 	margin:0 auto;
     }
 
 .metabarra{
+	font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
 	height: 38px;
 	margin: 0 auto;
@@ -21,6 +73,7 @@ body{
 
 .metabarramovil{
 	display: none;
+	font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
 	height: 38px;
 	margin: 0 auto;
@@ -28,14 +81,14 @@ body{
 	background-color: rgba(25, 26, 25, 1);
 	}
 
-nav{
+nav.web{
 	margin: 0 auto;
 	height: 38px;
 	padding: 0;
 	width: 1140px;
     }
 
-ul.menudesktop{
+ul.menuweb{
 	margin: 0 auto;
 	padding: 0;
 	height: 38px;
@@ -43,47 +96,77 @@ ul.menudesktop{
 
 ul.menumovil{
     display: none;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	height: 38px;			
 	}
 
-li{
+img.icono{
+	margin: 0 auto;
+	float: left;
+	height: 15px;
+	padding: 0px 7px;
+    }
+
+li.ead{
+	margin: 0 auto;
+	float: left;
+	width: 70px;
+	height: 38px;
+	text-align: left;
+	padding: 10px 0px 0px 0px;
+    }
+
+a.logoead{
+	text-decoration: none;
+	display: inline-block;
+	height: 28px;
+	margin: 0 auto;
+	padding: 0;
+	color: rgba(199, 81, 77, 1);
+	font-size: 18px;
+	font-weight: 500;
+    }
+
+a.logoead:hover{
+	color: rgba(180, 81, 90, 10);
+	font-size: 18px;
+	font-weight: 500;
+    }
+
+li.sitioweb{
 	width: auto;
-	height:38px;
+	height: auto;
 	float: left;
     list-style: none;
     text-align: center;
 	display: inline-block;
     list-style-type: none;
-    margin: 0;
-    padding: 10px 20px;
+    margin: 0 auto;
+    padding: 13px 20px 0px 20px;
     list-style-type: none;
     }
 
-li.ead{
-	width:70px;
-	text-align: left;
-	padding: 6px 0 0 0;
+a.sitio{
+	text-decoration: none;
+	display: inline-block;
+	height: 25px;
+    margin: 0 auto;
+    padding: 0;
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 300;
     }
 
-li.separador{
-	float: right;
-	color: rgba(255, 255, 255, 1);
-	padding: 10px 0;
-	margin:0;
+a.sitio:hover{
+	color: rgba(193, 194, 194, 1);
     }
 
-li.iniciarsesion{
-	float: right;
-    list-style: none;
-    text-align: right;
-	display: inline;
-    list-style-type: none;
-    display: inline;
-    margin: 0;
-    padding: 10px 10px;
-    list-style-type: none;
+a.active{
+	background-image: url(img/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 98%;
+	background-size: 18px;
     }
 
 li.buscador{
@@ -94,7 +177,9 @@ li.buscador{
     list-style-type: none;
     margin: 0 auto;
     padding: 0px 10px;
+    height: 38px;
     list-style-type: none;
+    vertical-align: middle;
     }
 
 #search-form{
@@ -107,14 +192,15 @@ li.buscador{
 input[type="search"]{
 	display: inline-block;
     background: rgba(69, 71, 71, 0.7);
-    width: 180px;
-    border: none;
+    width: 220px;
     font-size: 12px;
     font-weight: 100;
     color: rgba(255, 255, 255, 1);
-    height: 38px;
+    height: auto;
     margin: 0 auto;
     padding: 10px 10px;
+    outline: none;
+    border: none;
     }
 
 input[type="search"]:focus{
@@ -138,55 +224,15 @@ button:hover{
 	background-color: rgba(199, 81, 77, 1);
     }
 
-a{
-	text-decoration: none;
-	display: inline-block;
-	height:38px;
-    margin: 0 auto;
-    padding: 0;
-    color: rgba(255, 255, 255, 1);
-    font-size: 14px;
-    font-weight: 300;
+li.separador{
+	float: right;
+	color: rgba(255, 255, 255, 1);
+	padding: 13px 0;
+	height: 26;
+	margin:0;
     }
 
-a:hover{
-	color: rgba(193, 194, 194, 1);
-    }
-
-a.active{
-	background-image: url(img/arrow.gif);
-	background-repeat: no-repeat;
-	background-position: 50% 67%;
-	background-size: 14px;
-    }
-
-a.logoead{
-	color: rgba(199, 81, 77, 1);
-	font-size: 18px;
-	font-weight: 500;
-    }
-
-a.logoead:hover{
-	color: rgba(199, 81, 77, 1);
-	font-size: 18px;
-	font-weight: 500;
-    }
-
-a.logoead-active{
-	color: rgba(199, 81, 77, 1);
-	font-size: 18px;
-	font-weight: 500;
-	background-image: url(img/arrow.gif);
-	background-repeat: no-repeat;
-	background-position: 50% 80%;
-	background-size: 16px;
-    }
-
-a.logoead-active:hover{
-	color: rgba(180, 81, 90, 10);
-    }
-
-span{
+span.linea{
 	margin: 0 auto;
     padding: 0;
     text-align: center;
@@ -195,11 +241,18 @@ span{
     font-weight: 300;
     }
 
-img{
-	margin:auto;
-	float:left;
-	height:15px;
-	padding: 2px 7px;
+li.iniciarsesion{
+	float: right;
+    list-style: none;
+    text-align: right;
+	display: inline;
+    list-style-type: none;
+    display: inline;
+    margin: 0 auto;
+    height: 14px;
+    padding: 13px 10px;
+    list-style-type: none;
+    vertical-align: middle;
     }
 
 
@@ -207,24 +260,11 @@ img{
 
 			@media screen and (min-width: 992px) and (max-width: 1199px){
 
-			nav{
+			nav.web{
 				margin: 0 auto;
 				height: 38px;
 				padding: 0;
 				width: 952px;
-			    }
-
-			input[type="search"]{
-				display: inline-block;
-			    background: rgba(69, 71, 71, 0.7);
-			    width: 160px;
-			    border: none;
-			    font-size: 12px;
-			    font-weight: 100;
-			    color: rgba(255, 255, 255, 1);
-			    height: 38px;
-			    margin: 0 auto;
-			    padding: 10px 10px;
 			    }
 
 			}
@@ -233,65 +273,26 @@ img{
 
 								@media screen and (min-width: 768px) and (max-width: 991px){
 
-								.metabarra{
-									display: none;
-								    width: 100%;
-									height: 38px;
-									margin: 0 auto;
-									padding: 0;
-									background-color: rgba(25, 26, 25, 1);
-									}
+									nav.web{
+										margin: 0 auto;
+										height: 38px;
+										padding: 0;
+										width: 728px;
+									    }
 
-								.metabarramovil{
-									display: inline-block;
-								    width: 100%;
-									height: 38px;
-									margin: 0 auto;
-									padding: 0;
-									background-color: rgba(25, 26, 25, 1);
-									}
+									input[type="search"]{
+										display: none;
+									    background: rgba(69, 71, 71, 0.7);
+									    width: 220px;
+									    border: none;
+									    font-size: 12px;
+									    font-weight: 100;
+									    color: rgba(255, 255, 255, 1);
+									    height: auto;
+									    margin: 0 auto;
+									    padding: 10px 10px;
+									    }
 
-							    nav.navmovil{
-									margin: 0 auto;
-									height: 38px;
-									padding: 0;
-									width: 728px;
-								    }
-
-							    ul.menumovil{
-							    	display: inline-block;
-							    	margin: 0 auto;
-									padding: 0;
-									height: 38px;		
-								    }
-
-								li.movil{
-									width: auto;
-									height:38px;
-									float: left;
-								    list-style: none;
-								    text-align: center;
-									display: inline-block;
-								    list-style-type: none;
-								    margin: 0;
-								    padding: 10px 20px;
-								    list-style-type: none;
-								    border:1px solid white;
-								    }
-
-								ul.dropdown{
-									display:none;
-									}
-
-							    li.movil:hover > ul.dropdown {
-							    	display: inline-block;
-							   	 	}
-
-							   	li.eadmovil{
-								width:70px;
-								text-align: left;
-								padding: 6px 0;
-							    }
 
 								}
 
@@ -300,12 +301,6 @@ img{
 
 													@media screen and (min-width: 5px) and (max-width: 767px){
 
-														nav{
-															margin: 0 auto;
-															height: 38px;
-															padding: 0;
-															width: 300px;
-													    	}
 
 													}
 
