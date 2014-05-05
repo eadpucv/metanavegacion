@@ -6,6 +6,9 @@ Barra Meta Navegación para servicios digitales e[ad]
 *
 */
 
+
+/*--------------------Barra de Navegación--------------------*/
+
 body{
 	margin:0 auto;
     }
@@ -29,14 +32,14 @@ body{
 	background-color: rgba(25, 26, 25, 1);
 	}
 
-nav{
+nav.web{
 	margin: 0 auto;
 	height: 38px;
 	padding: 0;
 	width: 1140px;
     }
 
-ul.menudesktop{
+ul.menuweb{
 	margin: 0 auto;
 	padding: 0;
 	height: 38px;
@@ -49,43 +52,70 @@ ul.menumovil{
 	height: 38px;			
 	}
 
-li.ead_bar{
-	width: auto;
-	height:38px;
-	float: left;
-   list-style: none;
-   text-align: center;
-	display: inline-block;
-   list-style-type: none;
-   margin: 0;
-   padding: 10px 20px;
-   list-style-type: none;
-}
+/*--------------------Menú de navegación--------------------*/
 
 li.ead{
-	width:70px;
+	margin: 0 auto;
+	float: left;
+	width: 70px;
+	height: auto;
 	text-align: left;
-	padding: 6px 0 0 0;
+	padding: 8px 0px 0px 0px;
     }
 
-li.separador{
-	float: right;
-	color: rgba(255, 255, 255, 1);
-	padding: 10px 0;
-	margin:0;
+li.ead_bar{
+	width: auto;
+	height: auto;
+	float: left;
+    list-style: none;
+    text-align: center;
+	display: inline-block;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 10px 20px 0px 20px;
+    list-style-type: none;
+    } 
+
+/*--------------------Links--------------------*/
+
+.link{
+	text-decoration: none;
+	display: inline-block;
+	height: 28px;
+    margin: 0 auto;
+    padding: 0;
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 300;
     }
 
-li.iniciarsesion{
-	float: right;
-   list-style: none;
-   text-align: right;
-	display: inline;
-   list-style-type: none;
-   display: inline;
-   margin: 0;
-   padding: 10px 10px;
-   list-style-type: none;
-}
+.link:hover{
+	color: rgba(193, 194, 194, 1);
+    }
+
+.logoead{
+	text-decoration: none;
+	display: inline-block;
+	height: 30px;
+	margin: 0 auto;
+	padding: 0;
+	color: rgba(199, 81, 77, 1);
+	font-size: 18px;
+	font-weight: 500;
+    }
+
+.logoead:hover{
+	color: rgba(180, 81, 90, 10);
+    }
+
+.active{
+	background-image: url("https://s3.amazonaws.com/Ead/ead_bar_images/arrow.gif");
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+	background-size: 16px;
+    }
+
+/*--------------------Buscador--------------------*/
 
 li.buscador{
 	float: right;
@@ -140,43 +170,15 @@ button:hover{
 	background-color: rgba(199, 81, 77, 1);
     }
 
-.link{
-	text-decoration: none;
-	display: inline-block;
-	height:38px;
-    margin: 0 auto;
-    padding: 0;
-    color: rgba(255, 255, 255, 1);
-    font-size: 14px;
-    font-weight: 300;
+/*--------------------Separador--------------------*/
+
+li.separador{
+	float: right;
+	color: rgba(255, 255, 255, 1);
+	padding: 10px 0;
+	margin:0;
     }
-
-.link a:hover{
-	color: rgba(193, 194, 194, 1);
-    }
-
-a.logoead{
-	color: rgba(199, 81, 77, 1);
-	font-size: 18px;
-	font-weight: 500;
-    }
-
-a.logoead:hover{
-	color: rgba(199, 81, 77, 1);
-	font-size: 18px;
-	font-weight: 500;
-    }
-
-a.active{
-	background-image: url("https://s3.amazonaws.com/Ead/ead_bar_images/arrow.gif");
-	background-repeat: no-repeat;
-	background-position: 50% 80%;
-}
-
-a.logoead-active:hover{
-	color: rgba(180, 81, 90, 10);
-   }
-
+    
 span{
 	margin: 0 auto;
     padding: 0;
@@ -186,7 +188,23 @@ span{
     font-weight: 300;
    }
 
-img{
+/*--------------------Inicio de sesión--------------------*/
+
+li.iniciarsesion{
+	float: right;
+    list-style: none;
+    text-align: right;
+	display: inline;
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 10px 10px;
+    list-style-type: none;
+    }
+
+/*--------------------Íconos--------------------*/
+
+img.icono{
 	margin:auto;
 	float:left;
 	height:15px;
@@ -194,29 +212,11 @@ img{
    }
 
 
+
 			/*Pantalla mediana*/
 
 			@media screen and (min-width: 992px) and (max-width: 1199px){
 
-			nav{
-				margin: 0 auto;
-				height: 38px;
-				padding: 0;
-				width: 952px;
-			    }
-
-			input[type="search"]{
-				display: inline-block;
-			    background: rgba(69, 71, 71, 0.7);
-			    width: 160px;
-			    border: none;
-			    font-size: 12px;
-			    font-weight: 100;
-			    color: rgba(255, 255, 255, 1);
-			    height: 38px;
-			    margin: 0 auto;
-			    padding: 10px 10px;
-			    }
 
 			}
 
@@ -224,65 +224,6 @@ img{
 
 								@media screen and (min-width: 768px) and (max-width: 991px){
 
-								.metabarra{
-									display: none;
-								    width: 100%;
-									height: 38px;
-									margin: 0 auto;
-									padding: 0;
-									background-color: rgba(25, 26, 25, 1);
-									}
-
-								.metabarramovil{
-									display: inline-block;
-								    width: 100%;
-									height: 38px;
-									margin: 0 auto;
-									padding: 0;
-									background-color: rgba(25, 26, 25, 1);
-									}
-
-							    nav.navmovil{
-									margin: 0 auto;
-									height: 38px;
-									padding: 0;
-									width: 728px;
-								    }
-
-							    ul.menumovil{
-							    	display: inline-block;
-							    	margin: 0 auto;
-									padding: 0;
-									height: 38px;		
-								    }
-
-								li.movil{
-									width: auto;
-									height:38px;
-									float: left;
-								    list-style: none;
-								    text-align: center;
-									display: inline-block;
-								    list-style-type: none;
-								    margin: 0;
-								    padding: 10px 20px;
-								    list-style-type: none;
-								    border:1px solid white;
-								    }
-
-								ul.dropdown{
-									display:none;
-									}
-
-							    li.movil:hover > ul.dropdown {
-							    	display: inline-block;
-							   	 	}
-
-							   	li.eadmovil{
-								width:70px;
-								text-align: left;
-								padding: 6px 0;
-							    }
 
 								}
 
@@ -291,12 +232,6 @@ img{
 
 													@media screen and (min-width: 5px) and (max-width: 767px){
 
-														nav{
-															margin: 0 auto;
-															height: 38px;
-															padding: 0;
-															width: 300px;
-													    	}
 
 													}
 
