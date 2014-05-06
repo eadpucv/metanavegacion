@@ -304,7 +304,8 @@ input[type="search"]{
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
     display: none;
     padding-bottom: 2px;
-    width: 404px;
+    width: 500px;
+    padding: 20px;
 }
 /**
 *

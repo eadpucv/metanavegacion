@@ -17,8 +17,6 @@
 		  	}
 		);
 
-		// Buscador
-
 		return this;
 	};
 	
