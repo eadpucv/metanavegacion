@@ -35,19 +35,19 @@
         		</li>
 			 	<li class='separador'><span>|</span></li>
 			 	<li class='buscador'>
-			 		<form id='search-form'>
-			 			<input type='search'>
-			 			<button class='buscar ead_bar_modal_link' href="#ead_bar_modal_search" type='submit'>
-			 			<img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/lupa.svg'></button>
+			 		<form id="ead_bar_form"> 
+						<input type='search' id="ead_bar_input_search">
+			 			<button class='buscar' >
+			 				<img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/lupa.svg'>
+			 			</button>
 			 		</form>
+			 		<a class='ead_bar_modal_link' href="#ead_bar_modal_search" style="display:none;"></a>
 			   </li>
 			</ul>
 		</nav>
 		<div id="ead_bar_modal_search" class="ead_bar_modal" style="display: none;">
-			<h1>Ejemplo del modal</h1>
-			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat augue nec enim luctus dignissim porta eu massa. Pellentesque ipsum turpis, commodo eu hendrerit ac, sodales a nisl. Nulla pulvinar lacus ut elit dignissim auctor ac vitae mauris. Aliquam interdum ipsum eleifend congue accumsan. Nam ut consectetur diam. Aliquam scelerisque pretium orci. Donec eu vehicula sapien. In in sagittis massa.</p>
-
-			<p>Morbi sed sapien massa. Proin nec ligula nec neque lacinia malesuada. Morbi ullamcorper eget nulla ac accumsan. Donec sed hendrerit turpis. Duis sit amet urna tincidunt nunc facilisis dictum. Morbi quis quam id nulla lobortis vestibulum. Donec nec dictum arcu. In imperdiet volutpat luctus. </p>
+			<h2>Resultados de Busqueda</h2>
+			<div id="ead_bar_notifications">blebler</div>
 		</div>
 		
 		
@@ -94,6 +94,7 @@
 			lastname: ""
 			})
 		});
+		$(".ead_bar_modal_link").click();
 	</script>
 	<!-- fin barra de menú -->
 
