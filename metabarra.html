@@ -8,7 +8,7 @@
 		<meta charset='UTF-8'/>
 		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 		
-		<link href='javascript/ead-bar/css/metabarra.css' rel='stylesheet'>
+		<link href='javascript/ead-bar/css/meta.css' rel='stylesheet'>
 		<script type="text/javascript" src="javascript/jquery.js"></script>
 		<script type="text/javascript" src="javascript/ead-bar/ead-bar.js"></script>
 	</head>
@@ -23,23 +23,23 @@
 			<ul class='menuweb'>
 			 	<li class='ead'><a class='logoead active' href='#' id='link_ead'>e[ad]</a></li>
 			 	<li class='ead_bar'><a href='#' class='link inactive' id='link_casiopea'>
-			 	<img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/casiopea.svg'>Wiki Casiopea</a></li>
+			 	<img class='icono' src='img/icon-casiopea.gif'>Wiki Casiopea</a></li>
+			 	<li class='ead_bar'><a href='#' class='link inactive' id='link_casiopea'>
+			 	<img class='icono' src='img/icon-archivo.gif'>Archivo Histórico</a></li>
 			 	<li class='ead_bar'><a href='#' class='link inactive' id='link_travesias'>
-			 	<img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/travesia.svg'>Travesías</a></li>
-			 	<li class='ead_bar iniciarsesion ead-bar-dropdown'><a href='#' class="link">
-			 		<img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/perfil.svg'>Iniciar sesión</a>	  
+			 	<img class='icono' src='img/icon-travesia.gif'>Travesías</a></li>
+			 	<li class='ead_bar'><a href='#' class='link inactive' id='link_casiopea'>
+			 	<img class='icono' src='img/icon-estorninos.gif'>Estorninos</a></li>
+			 	<li class='ead_bar_derecha iniciarsesion ead-bar-dropdown'><a href='#' class="link">
+			 		<img class='icono' src='img/icon-usuario.gif'>Iniciar sesión</a>	  
 			 	   <ul class="fallback">
         				<li><a href="#" class="link">Sub-Link 1</a></li>
         				<li><a href="#" class="link">Sub-Link 2</a></li>
         		   </ul>
         		</li>
-			 	<li class='separador'><span>|</span></li>
-			 	<li class='buscador'>
+			 	<li class='ead_bar_derecha'>
 			 		<form id="ead_bar_form"> 
-						<input type='search' id="ead_bar_input_search">
-			 			<button class='buscar' >
-			 				<img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/lupa.svg'>
-			 			</button>
+						<input type='search' placeholder='búsqueda' id="ead_bar_input_search">
 			 		</form>
 			 		<a class='ead_bar_modal_link' href="#ead_bar_modal_search" style="display:none;"></a>
 			   </li>
