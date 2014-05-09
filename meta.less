@@ -114,12 +114,11 @@ body{
 					padding: 10px 20px 0px 40px;
 					color: fade(@blanco, 90%);
 					font-weight: 300;
-
-					&.iniciarsesion{ 
-						padding: 10px 20px 0px 40px; 
 					}
 
-				    }
+				&.iniciarsesion{ 
+					padding: 10px 20px 0px 40px; 
+					}
 
 				&.logoead{
 					padding: 6px 20px 0px 20px;
@@ -238,41 +237,103 @@ body{
 
 						@media screen and (min-width: 768px) and (max-width: 991px){
 
-							.metabarra {
-							    display: none;
-								}
+						.metabarra {
 
-							.metabarramovil{
-								display: inline-block;
-								margin: 0 auto;
-								padding: 0;
-								font-family: @sans;
-								width: 100%;
-								background-color: @negro;
-						    	}
+							nav.web{
+					
+								ul.menuweb{
+								max-width: 768px;
 
-					}
+									li{
+
+										a{
+
+											&.link{
+												padding: 10px 15px 0px 35px;
+												color: fade(@blanco, 90%);
+												font-weight: 300;
+												}
+
+											&.iniciarsesion{ 
+												padding: 10px 15px 0px 35px; 
+												}
+
+											&.logoead{
+												padding: 6px 15px 0px 15px;
+												color: @rojo-claro;
+												font-size: 18px;
+												font-weight: 500;
+											    }
+
+
+										}
+
+										img.icono{
+									    	display: block;
+									    	position: absolute;
+											top: 5px;
+											left: 11px;
+											right: 0px;
+									    	}
+
+										#ead_bar_form{
+											float: left;
+											margin-top: 0;
+											height: @barra;
+											padding: 0px 10px 0px 0px;
+											width: 90px;
+										    }
+
+								    	input[type='search']{
+									    	display: inline-block;
+										    background: fade(@blanco, 15%);
+											width: 100%;
+										    border: none;
+										    font-size: 12px;
+										    font-weight: 100;
+										    color: @blanco;
+										    height: auto;
+										    margin: 0 auto;
+										    padding: 12px 10px 11px 10px;
+						    				}
+
+			    					}
+
+								}				
+
+				        	}
+
+				        }
+
+				   		}
 
 												/*Pantalla extra pequeña (Móvil)*/
 
 												@media screen and (min-width: 300px) and (max-width: 767px){
+ 							
+					 							.metabarra {
+												    display: none;
+													}
 
-													.metabarra {
-														display: none;
-														margin: 0 auto;
-														padding: 0;
-														font-family: @sans;
-													    width: 100%;
-														background-color: @negro;
-													    }
+												.metabarramovil{
+													display: inline-block;
+													margin: 0 auto;
+													padding: 0;
+													font-family: @sans;
+													width: 100%;
+													background-color: @negro;
 
-													.metabarramovil{
-														display: inline-block;
-														margin: 0 auto;
-														padding: 0;
-														font-family: @sans;
-													    width: 100%;
-														background-color: @negro;
-													    }
+													nav.movil{
+
+														ul.menumovil{
+															margin: 0 auto;
+															padding: 0;
+															max-width: 748px;
+															font-size: 14px;
+															height: @barra;
+														    }
+											    	}
+
+										        }
 
 												}
