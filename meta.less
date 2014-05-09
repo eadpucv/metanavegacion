@@ -8,7 +8,6 @@ Barra de Meta Navegación para los servicios digitales de la e[ad]
 @negro: 				rgba(25, 26, 25, 1);
 @gris:                  rgba(69, 71, 71, 1);
 @blanco: 				rgba(255, 255, 255, 1);
-@rojo:					rgba(172, 70, 67, 1);
 @rojo-claro: 			rgba(199, 81, 77, 1);
 
 //Tipografía
@@ -47,8 +46,8 @@ body{
 
 		ul.menuweb{
 			margin: 0 auto;
-			padding: 0;
-			max-width: 1180px;
+			padding: 0px 20px 0px 20px;
+			max-width: 100%;
 			font-size: 14px;
 			height: @barra;
 
@@ -90,7 +89,6 @@ body{
 						padding: 0;
 						}
 					}
-
 				}
 
 				&.ead-bar-dropdown ul.fallback{
@@ -134,7 +132,7 @@ body{
 					background-size: 18px;
 				    }
 
-				&:hover{ background-color: fade(@blanco, 10%); }
+				&:hover{ background-color: fade(@blanco, 5%); }
 
 		    }
 
@@ -150,13 +148,13 @@ body{
 				float: left;
 				margin-top: 0;
 				height: @barra;
-				padding: 0px 10px 0px 0px;
+				padding: 0;
 				width: 180px;
 			    }
 
 		    input[type='search']{
 		    	display: inline-block;
-			    background: fade(@blanco, 15%);
+			    background: fade(@blanco, 10%);
 				width: 100%;
 			    border: none;
 			    font-size: 12px;
@@ -180,11 +178,25 @@ body{
 
 		        }
 
+		    button.buscar{
+		    	display: none;
+		    	width: 40px;
+		    	float: right;
+				height: @barra;
+			    margin: 0 auto;
+			    background-color: @negro;
+			    padding: 0;
+			    cursor: pointer;
+			    border: none;
+			    outline: none;
+			    background-color: fade(@blanco, 50%);
+			    background-image: url('../../../img/icon-busqueda.gif');
+				background-position: center;
+				background-repeat: no-repeat;
 			}
 
+			}
 		}
-
-
 	}
 
 /*--------------Modal--------------*/
@@ -225,12 +237,11 @@ body{
 	nav.web{
 		
 		ul.menuweb{
-		max-width: 972px;
+		max-width: 1199px;
     	}
 
     }
 }
-
 }
 
 						/*Pantalla pequeña*/
@@ -242,74 +253,44 @@ body{
 							nav.web{
 					
 								ul.menuweb{
-								max-width: 768px;
+								padding: 0px 10px 0px 10px;
+								max-width: 991px;
+								font-size: 13px;
 
 									li{
 
 										a{
+											&.link{ padding: 10px 15px 0px 35px; }
 
-											&.link{
-												padding: 10px 15px 0px 35px;
-												color: fade(@blanco, 90%);
-												font-weight: 300;
-												}
-
-											&.iniciarsesion{ 
-												padding: 10px 15px 0px 35px; 
-												}
+											&.iniciarsesion{ padding: 10px 15px 0px 35px; }
 
 											&.logoead{
 												padding: 6px 15px 0px 15px;
-												color: @rojo-claro;
-												font-size: 18px;
-												font-weight: 500;
+												font-size: 17px;
 											    }
-
-
 										}
 
 										img.icono{
-									    	display: block;
-									    	position: absolute;
-											top: 5px;
+											top: 4px;
 											left: 11px;
-											right: 0px;
 									    	}
 
 										#ead_bar_form{
-											float: left;
-											margin-top: 0;
-											height: @barra;
-											padding: 0px 10px 0px 0px;
-											width: 90px;
+											display: none;
 										    }
 
-								    	input[type='search']{
-									    	display: inline-block;
-										    background: fade(@blanco, 15%);
-											width: 100%;
-										    border: none;
-										    font-size: 12px;
-										    font-weight: 100;
-										    color: @blanco;
-										    height: auto;
-										    margin: 0 auto;
-										    padding: 12px 10px 11px 10px;
-						    				}
-
+						    		    button.buscar{
+									    	display: block;
+										    }
 			    					}
-
 								}				
-
 				        	}
-
 				        }
-
 				   		}
 
-												/*Pantalla extra pequeña (Móvil)*/
+												/*Pantalla extra pequeña (Móvil grande)*/
 
-												@media screen and (min-width: 300px) and (max-width: 767px){
+												@media screen and (min-width: 460px) and (max-width: 767px){
  							
 					 							.metabarra {
 												    display: none;
@@ -327,13 +308,90 @@ body{
 
 														ul.menumovil{
 															margin: 0 auto;
-															padding: 0;
-															max-width: 748px;
-															font-size: 14px;
+															padding: 0px 5px 0px 5px;
+															max-width: 767px;
+															font-size: 13px;
 															height: @barra;
-														    }
+
+															li{
+																float: left;
+																list-style: none;
+																display: inline;
+																margin: 0 auto;
+																padding: 0;
+																position: relative;
+																height: @barra;
+																text-align: center;
+
+															    &.ead_bar{
+																width: auto;
+																} 
+
+																&.ead_bar_derecha{
+																width: auto;
+																float: right;
+																}
+
+															    a{
+															    	text-decoration: none;
+																	display: inline-block;
+																	transition: .2s all ease;
+																	height: @barra;
+
+																	&.link{
+																		padding: 10px 25px 0px 25px;
+																		color: fade(@blanco, 90%);
+																		font-weight: 300;
+																		}
+
+																	&.iniciarsesion{ 
+																		padding: 10px 10px 0px 40px; 
+																		}
+
+																	&.logoead{
+																		padding: 6px 10px 0px 10px;
+																		color: @rojo-claro;
+																		font-size: 18px;
+																		font-weight: 500;
+																	    }
+
+																	&.active{
+																		background-image: url("https://s3.amazonaws.com/Ead/ead_bar_images/arrow.gif");
+																		background-repeat: no-repeat;
+																		background-position: 50% 100%;
+																		background-size: 18px;
+																	    }
+
+																	&:hover{ background-color: fade(@blanco, 5%); }
+
+															    }
+
+															    img.icono{
+															    	display: block;
+															    	position: absolute;
+																	top: 5px;
+																	left: 15px;
+															    	}
+
+															    button.buscar{ 
+															    	display: block;
+															    	width: 40px;
+															    	float: right;
+																	height: @barra;
+																    margin: 0 auto;
+																    background-color: @negro;
+																    padding: 0;
+																    cursor: pointer;
+																    border: none;
+																    outline: none;
+																    background-color: fade(@blanco, 50%);
+																    background-image: url('../../../img/icon-busqueda.gif');
+																	background-position: center;
+																	background-repeat: no-repeat; 
+																	}
+											
+															}
+														}
 											    	}
-
 										        }
-
 												}

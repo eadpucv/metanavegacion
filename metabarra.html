@@ -49,6 +49,8 @@
 			 	
 			 	<li class='ead_bar_derecha'>
 			 		
+			 		<button class='buscar'></button>
+
 			 		<form id="ead_bar_form"> 
 					<input type='search' placeholder='Buscar' id="ead_bar_input_search">
 			 		</form>
@@ -59,6 +61,7 @@
 			</ul>
 
 		</nav>
+
 		<div id="ead_bar_modal_search" class="ead_bar_modal" style="display: none;">
 			<h2>Resultados de Busqueda</h2>
 			<div id="ead_bar_notifications">blebler</div>
@@ -74,32 +77,42 @@
 
              <ul class='menumovil'>
 
-			 	<li class='ead'><a class='logoead active' href='#' id='link_ead'>e[ad]</a></li>
+			 	<li class='ead_bar'><a class='logoead inactive' href='#' id='link_ead'>e[ad]</a></li>
 			 	
-			 	<li class='link-movil'><a href='#'>Menú</a>
+			 	<li class='ead_bar'><a href='#' class='link active' id='link_casiopea'>
+			 	<img class='icono' src='img/icon-casiopea.gif'></a></li>
 
-			 	<ul class='dropdown'>
-			 	<li><a href='#'><img src='img/casiopea.svg'>Wiki Casiopea</a></li>
-			 	<li><a href='#'><img src='img/travesia.svg'>Travesías</a></li>
-			 	<li><a href='#'><img src='img/constel.svg'>Constel</a></li>
-			    </ul>
+			 	<li class='ead_bar'><a href='#' class='link inactive' id='link_casiopea'>
+			 	<img class='icono' src='img/icon-archivo.gif'></a></li>
 
-			    </li>
+			 	<li class='ead_bar'><a href='#' class='link inactive' id='link_travesias'>
+			 	<img class='icono' src='img/icon-travesia.gif'></a></li>
 
-			 	<li class='iniciarsesion'><a href='#'><img src='img/perfil.svg'>Iniciar sesión</a></li>
-			 	<li class='separador'><span>|</span></li>
+			 	<li class='ead_bar'><a href='#' class='link inactive' id='link_casiopea'>
+			 	<img class='icono' src='img/icon-estorninos.gif'></a></li>
 
-			 	<li class='buscador'>
-			 	<form id='search-form'>
-			 	<input type='search' placeholder='Búsqueda'>
-			    </form>
-			    <button type='submit'><img src='img/lupa.svg'></button>
+			 	<li class='ead_bar_derecha ead-bar-dropdown'><a href='#' class="link iniciarsesion">
+			 		<img class='icono' src='img/icon-usuario.gif'>Iniciar sesión</a>	
+
+			 	    <ul class="fallback">
+        				<li><a href="#" class="link">Mi perfil</a></li>
+        				<li><a href="#" class="link">Editar cuenta</a></li>
+        				<li><a href="#" class="link">Cerrar sesión</a></li>
+        		    </ul>
+
+        		</li>
+			 	
+			 	<li class='ead_bar_derecha'>
+			 		
+			 		<button class='buscar'></button>
+			   
 			    </li>
 
              </ul>
 
         </nav>
 	</div>     
+
 	<script type="text/javascript">
 		$(document).ready(function(){ $( "body" ).load_ead_bar({
 			id: "",
