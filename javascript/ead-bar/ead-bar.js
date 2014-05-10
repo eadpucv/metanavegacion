@@ -41,20 +41,10 @@
 				// Habilitar boton y link para iniciar session
 				$("#ead-bar-dropdown_li").prepend("<a href='"+options.site_login_url+"' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='icono' src='img/icon-usuario.gif'>Iniciar sesión</a>")
 			}
-		});
 
-		// Identificar Sitio
-			
-
-
-
-
-
-
-		// Identificar el Sitio
-
-		
-
+			// Identificar Sitio
+				$("#link_"+options.site_name).addClass( "active" );			
+			});
 
 		return this;
 	};
