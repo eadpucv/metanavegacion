@@ -8,7 +8,6 @@ Barra de Meta Navegación para los servicios digitales de la e[ad]
 @negro: 				rgba(25, 26, 25, 1);
 @gris:                  rgba(69, 71, 71, 1);
 @blanco: 				rgba(255, 255, 255, 1);
-@rojo:					rgba(172, 70, 67, 1);
 @rojo-claro: 			rgba(199, 81, 77, 1);
 
 //Tipografía
@@ -47,8 +46,8 @@ body{
 
 		ul.menuweb{
 			margin: 0 auto;
-			padding: 0;
-			max-width: 1140px;
+			padding: 0px 20px 0px 20px;
+			max-width: 100%;
 			font-size: 14px;
 			height: @barra;
 
@@ -60,18 +59,14 @@ body{
 			padding: 0;
 			position: relative;
 			height: @barra;
-
-				&.ead {
-				width: 70px;
-				text-align: left;
-		    	}
+			text-align: center;
 
 		    	&.ead_bar{
 				width: auto;
-				text-align: center;
 				} 
 
 				&.ead_bar_derecha{
+				width: auto;
 				float: right;
 				}
 
@@ -85,24 +80,23 @@ body{
 					width: 110px; 
 					padding-top: 5px; 
 					padding-left: 1px; 
-					padding-bottom: 5px; 
+					padding-bottom: 5px;
 				    list-style-type: none;
 
 						a{
 						display: block; 
 						color: fade(@blanco, 70%);
-						padding-left: 1px
+						padding: 0;
 						}
 					}
-
 				}
 
 				&.ead-bar-dropdown ul.fallback{
-				padding-top: 10px; 
+				padding-top: 5px; 
 				list-style-type: none;
 
 					&:hover{
-					display:block; 
+					display: block; 
 					list-style-type: none;
 					}
 
@@ -115,25 +109,20 @@ body{
 				height: @barra;
 
 				&.link{
-					padding: 10px 30px 0px 30px;
-					color: fade(@blanco, 70%);
+					padding: 10px 20px 0px 40px;
+					color: fade(@blanco, 90%);
 					font-weight: 300;
-
-					&:hover{ color: @blanco; }
-
-					&.iniciarsesion{ 
-						padding: 10px 0px 0px 30px; 
-						&:hover{ color: @blanco; }
 					}
 
-				    }
+				&.iniciarsesion{ 
+					padding: 10px 20px 0px 40px; 
+					}
 
 				&.logoead{
-					padding: 6px 0px 0px 0px;
-					color: @rojo;
+					padding: 6px 20px 0px 20px;
+					color: @rojo-claro;
 					font-size: 18px;
 					font-weight: 500;
-					&:hover{ color: @rojo-claro; }
 				    }
 
 				&.active{
@@ -143,13 +132,15 @@ body{
 					background-size: 18px;
 				    }
 
+				&:hover{ background-color: fade(@blanco, 5%); }
+
 		    }
 
 		    img.icono{
 		    	display: block;
 		    	position: absolute;
 				top: 5px;
-				left: 4px;
+				left: 16px;
 				right: 0px;
 		    	}
 
@@ -157,13 +148,13 @@ body{
 				float: left;
 				margin-top: 0;
 				height: @barra;
-				padding: 0px 10px 0px 0px;
-				width: 200px;
+				padding: 0;
+				width: 180px;
 			    }
 
 		    input[type='search']{
 		    	display: inline-block;
-			    background: fade(@blanco, 20%);
+			    background: fade(@blanco, 10%);
 				width: 100%;
 			    border: none;
 			    font-size: 12px;
@@ -179,7 +170,7 @@ body{
 			    	background-color: fade(@blanco, 50%);
 					border: none;
 					outline: none;
-					color: @negro;
+					color: @gris;
 					background-image: url('../../../img/icon-busqueda.gif');
 					background-position: left;
 					background-repeat: no-repeat;
@@ -187,11 +178,25 @@ body{
 
 		        }
 
+		    button.buscar{
+		    	display: none;
+		    	width: 40px;
+		    	float: right;
+				height: @barra;
+			    margin: 0 auto;
+			    background-color: @negro;
+			    padding: 0;
+			    cursor: pointer;
+			    border: none;
+			    outline: none;
+			    background-color: fade(@blanco, 50%);
+			    background-image: url('../../../img/icon-busqueda.gif');
+				background-position: center;
+				background-repeat: no-repeat;
 			}
 
+			}
 		}
-
-
 	}
 
 /*--------------Modal--------------*/
@@ -232,59 +237,161 @@ body{
 	nav.web{
 		
 		ul.menuweb{
-		max-width: 952px;
+		max-width: 1199px;
     	}
 
     }
 }
-
 }
 
 						/*Pantalla pequeña*/
 
 						@media screen and (min-width: 768px) and (max-width: 991px){
 
-							.metabarra {
+						.metabarra {
 
-								nav.web{
-									
-									ul.menuweb{
-									max-width: 728px;
+							nav.web{
+					
+								ul.menuweb{
+								padding: 0px 15px 0px 15px;
+								max-width: 991px;
+								font-size: 13px;
 
 									li{
 
+										a{
+											&.link{ padding: 10px 15px 0px 35px; }
+
+											&.iniciarsesion{ padding: 10px 15px 0px 35px; }
+
+											&.logoead{
+												padding: 6px 15px 0px 15px;
+												font-size: 17px;
+											    }
+										}
+
+										img.icono{
+											top: 4px;
+											left: 11px;
+									    	}
+
 										#ead_bar_form{
-											float: left;
-											margin-top: 0;
-											height: @barra;
-											padding: 0px 10px 0px 0px;
-											width: 100px;
+											display: none;
 										    }
 
-									    input[type='search']{
-									    	display: inline-block;
-										    background: fade(@blanco, 20%);
-											width: 100%;
-										    border: none;
-										    font-size: 12px;
-										    font-weight: 100;
-										    color: @blanco;
-										    height: auto;
-										    margin: 0 auto;
-										    padding: 12px 10px 11px 10px;
-
-							    	}
-
-							        }
-							    }
-
-						    }
-
-					    }
-					}
+						    		    button.buscar{
+									    	display: block;
+										    }
+			    					}
+								}				
+				        	}
+				        }
+				   		}
 
 												/*Pantalla extra pequeña (Móvil)*/
 
-												@media screen and (min-width: 300px) and (max-width: 767px){
+												@media screen and (min-width: 200px) and (max-width: 767px){
+ 							
+					 							.metabarra {
+												    display: none;
+													}
 
+												.metabarramovil{
+													display: inline-block;
+													margin: 0 auto;
+													padding: 0;
+													font-family: @sans;
+													width: 100%;
+													background-color: @negro;
+
+													nav.movil{
+
+														ul.menumovil{
+															margin: 0 auto;
+															padding: 0px 10px 0px 10px;
+															max-width: 767px;
+															font-size: 13px;
+															height: @barra;
+
+															li{
+																float: left;
+																list-style: none;
+																display: inline;
+																margin: 0 auto;
+																padding: 0;
+																position: relative;
+																height: @barra;
+																text-align: center;
+
+															    &.ead_bar{
+																width: auto;
+																} 
+
+																&.ead_bar_derecha{
+																width: auto;
+																float: right;
+																}
+
+															    a{
+															    	text-decoration: none;
+																	display: inline-block;
+																	transition: .2s all ease;
+																	height: @barra;
+
+																	&.link{
+																		padding: 10px 25px 0px 25px;
+																		color: fade(@blanco, 90%);
+																		font-weight: 300;
+																		}
+
+																	&.iniciarsesion{ 
+																		padding: 10px 25px 0px 25px; 
+																		}
+
+																	&.logoead{
+																		padding: 6px 10px 0px 10px;
+																		color: @rojo-claro;
+																		font-size: 18px;
+																		font-weight: 500;
+																	    }
+
+																	&.active{
+																		background-image: url("https://s3.amazonaws.com/Ead/ead_bar_images/arrow.gif");
+																		background-repeat: no-repeat;
+																		background-position: 50% 100%;
+																		background-size: 18px;
+																	    }
+
+																	&:hover{ background-color: fade(@blanco, 5%); }
+
+															    }
+
+															    img.icono{
+															    	display: block;
+															    	position: absolute;
+																	top: 5px;
+																	left: 15px;
+															    	}
+
+															    button.buscar{ 
+															    	display: block;
+															    	width: 40px;
+															    	float: right;
+																	height: @barra;
+																    margin: 0 auto;
+																    background-color: @negro;
+																    padding: 0;
+																    cursor: pointer;
+																    border: none;
+																    outline: none;
+																    background-color: fade(@blanco, 50%);
+																    background-image: url('../../../img/icon-busqueda.gif');
+																	background-position: center;
+																	background-repeat: no-repeat; 
+																	}
+											
+															}
+														}
+											    	}
+										        }
 												}
