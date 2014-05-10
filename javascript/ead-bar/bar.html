@@ -1,0 +1,73 @@
+<div class='metabarra'>
+	<nav class='web'>
+		<ul class='menuweb'>
+		 	<li class='ead'><a class='logoead active' href='#' id='link_ead'>e[ad]</a></li>
+
+		 	<li class='ead_bar'><a href='#' class='link inactive' id='link_casiopea'>
+		 	<img class='icono' src='img/icon-casiopea.gif'>Wiki Casiopea</a></li>
+
+		 	<li class='ead_bar'><a href='#' class='link inactive' id='link_casiopea'>
+		 	<img class='icono' src='img/icon-archivo.gif'>Archivo Histórico</a></li>
+
+		 	<li class='ead_bar'><a href='#' class='link inactive' id='link_travesias'>
+		 	<img class='icono' src='img/icon-travesia.gif'>Travesías</a></li>
+
+		 	<li class='ead_bar'><a href='#' class='link inactive' id='link_casiopea'>
+		 	<img class='icono' src='img/icon-estorninos.gif'>Estorninos</a></li>
+
+		 	<li class='ead_bar_derecha ead-bar-dropdown'><a href='#' class="link iniciarsesion">
+		 		<img class='icono' src='img/icon-usuario.gif'>Iniciar sesión</a>	
+
+		 	    <ul class="fallback" style="display:none">
+     				<li><a href="#" class="link">Mi perfil</a></li>
+     				<li><a href="#" class="link">Editar cuenta</a></li>
+     				<li><a href="#" class="link">Cerrar sesión</a></li>
+     		    </ul>
+     		</li>
+		 	
+		 	<li class='ead_bar_derecha'>
+		 		<form id="ead_bar_form" action="http://localhost:4567/metasearch"> 
+					<input type='search' name="query" placeholder='Buscar' id="ead_bar_input_search">
+		 		</form>
+		   </li>
+		</ul>
+	</nav>		
+</div>   
+
+ <!-- barra de menú móvil -->
+
+ <div class='metabarramovil'>
+	<nav class='navmovil'>
+		<ul class='menumovil'>
+		 	<li class='ead'><a class='logoead active' href='#' id='link_ead'>e[ad]</a></li>
+		 	<li class='link-movil'><a href='#'>Menú</a>
+			 	<ul class='dropdown'>
+			 		<li><a href='#'><img src='img/casiopea.svg'>Wiki Casiopea</a></li>
+			 		<li><a href='#'><img src='img/travesia.svg'>Travesías</a></li>
+			 		<li><a href='#'><img src='img/constel.svg'>Constel</a></li>
+			    </ul>
+		    </li>
+
+		 	<li class='iniciarsesion'><a href='#'><img src='img/perfil.svg'>Iniciar sesión</a></li>
+		 	<li class='separador'><span>|</span></li>
+
+		 	<li class='buscador'>
+		 		<form id='search-form'>
+		 			<input type='search' placeholder='Búsqueda'>
+		    	</form>
+		    	<button type='submit'><img src='img/lupa.svg'></button>
+		   </li>
+		</ul>
+	</nav>
+</div>  
+<script type="text/javascript">
+	$('li.ead-bar-dropdown ul').hide();
+	$('nav li.ead-bar-dropdown').hover(
+	  	function () {
+			$('ul', this).stop().slideDown(100);
+	  	},
+	  	function () {
+			$('ul', this).stop().slideUp(100);
+	  	}
+	);
+</script>
