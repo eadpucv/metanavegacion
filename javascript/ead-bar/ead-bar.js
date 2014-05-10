@@ -33,13 +33,13 @@
 				);	
 
 				// Asigno Textos y Url's
-				$("#ead-bar-dropdown_li").prepend("<a href='#' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='icono' src='img/icon-usuario.gif'>"+ options.name + " " + options.lastname + "</a>");
+				$("#ead-bar-dropdown_li").prepend("<a href='#' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>"+ options.name + " " + options.lastname + "</a>");
 				$("#ead_bar_dropdown-perfil").attr('href','http://www.com.com');
 				$("#ead_bar_dropdown-account").attr('href',"http://personas.ead.pucv.cl/usuarios/edit/"+options.id);
 				$("#ead_bar_dropdown-end_session").attr('href',options.site_logout_url);								
 			} else {
 				// Habilitar boton y link para iniciar session
-				$("#ead-bar-dropdown_li").prepend("<a href='"+options.site_login_url+"' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='icono' src='img/icon-usuario.gif'>Iniciar sesión</a>")
+				$("#ead-bar-dropdown_li").prepend("<a href='"+options.site_login_url+"' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>Iniciar sesión</a>")
 			}
 
 			// Identificar Sitio
