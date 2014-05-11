@@ -106,13 +106,13 @@ body{
 		    	text-decoration: none;
 				display: inline-block;
 				transition: .2s all ease;
+				height: @barra;
+				color: fade(@blanco, 90%);
 				
 
 				&.link{
 					padding: 10px 20px 0px 40px;
-					color: fade(@blanco, 90%);
 					font-weight: 300;
-					height: 29px;
 					}
 
 				&.iniciarsesion{ 
@@ -124,7 +124,6 @@ body{
 					color: @rojo-claro;
 					font-size: 18px;
 					font-weight: 500;
-					height: 33px;
 				    }
 
 				&.active{
@@ -134,7 +133,7 @@ body{
 					background-size: 18px;
 				    }
 
-				&:hover{ background-color: fade(@blanco, 5%); }
+				&:hover{ background-color: fade(@blanco, 10%); }
 
 		    }
 
@@ -150,13 +149,13 @@ body{
 				float: left;
 				margin-top: 0;
 				height: @barra;
-				padding: 0;
+				padding: 0px 10px 0px 0px;
 				width: 180px;
 			    }
 
 		    input[type='search']{
 		    	display: inline-block;
-			    background: fade(@blanco, 10%);
+			    background: fade(@blanco, 15%);
 				width: 100%;
 			    border: none;
 			    font-size: 12px;
@@ -195,6 +194,8 @@ body{
 			    background-image: url('https://s3.amazonaws.com/Ead/ead_bar_images/icon-busqueda.gif');
 				background-position: center;
 				background-repeat: no-repeat;
+
+				&:hover{ background-color: fade(@blanco, 10%)}
 			}
 
 			}
