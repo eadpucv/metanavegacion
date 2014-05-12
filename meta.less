@@ -85,7 +85,7 @@ body{
 
 						a{
 						display: block; 
-						color: fade(@blanco, 70%);
+						color: fade(@blanco, 90%);
 						padding: 0;
 						}
 					}
@@ -185,7 +185,6 @@ body{
 		    	float: right;
 				height: @barra;
 			    margin: 0px 10px 0px 0px;
-			    background-color: @negro;
 			    padding: 0;
 			    cursor: pointer;
 			    border: none;
@@ -337,6 +336,27 @@ body{
 																float: right;
 																}
 
+																&.ead-bar-dropdown ul {   
+															    list-style-position: inside; 
+																position: absolute; 
+																background: @negro;
+																list-style-type: none;
+
+																	li{
+																	width: 110px; 
+																	padding-top: 5px; 
+																	padding-left: 1px; 
+																	padding-bottom: 5px;
+																    list-style-type: none;
+
+																		a{
+																		display: block; 
+																		color: fade(@blanco, 70%);
+																		padding: 0;
+																		}
+																	}
+																}
+
 															    a{
 															    	text-decoration: none;
 																	display: inline-block;
@@ -384,7 +404,6 @@ body{
 															    	float: right;
 																	height: @barra;
 																    margin: 0px 10px 0px 0px;
-																    background-color: @negro;
 																    padding: 0;
 																    cursor: pointer;
 																    border: none;
@@ -397,6 +416,27 @@ body{
 																	&:hover{ background-color: fade(@blanco, 60%); }
 
 																	&:active{ background-color: fade(@blanco, 60%); }
+
+																	}
+
+																button.sitios{ 
+															    	display: block;
+															    	width: 40px;
+															    	float: right;
+																	height: @barra;
+																    margin: 0 auto;
+																    padding: 0;
+																    cursor: pointer;
+																    border: none;
+																    outline: none;
+																    background-color: @negro;
+																    background-image: url('../../../img/menu.png');
+																	background-position: center;
+																	background-repeat: no-repeat; 
+
+																	&:hover{ background-color: fade(@blanco, 10%); }
+
+																	&:active{ background-color: fade(@blanco, 10%); }
 
 																	}
 											
