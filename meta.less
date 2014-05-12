@@ -17,15 +17,15 @@ Barra de Meta Navegación para los servicios digitales de la e[ad]
 @barra:   		38px;
 
 
-/*--------------Barra de Meta Navegación--------------*/
+/*--------------------------------Barra de Meta Navegación--------------------------------*/
 
 * {
     box-sizing: border-box;
-}
+	}
 
 *:before, *:after {
     box-sizing: border-box;
-}
+	}
 
 body{
 	margin: 0 auto;
@@ -52,53 +52,54 @@ body{
 			height: @barra;
 
 			li{
-			float: left;
-			list-style: none;
-			display: inline;
-			margin: 0 auto;
-			padding: 0;
-			position: relative;
-			height: @barra;
-			text-align: center;
+				float: left;
+				list-style: none;
+				display: inline;
+				margin: 0 auto;
+				padding: 0;
+				position: relative;
+				height: @barra;
+				text-align: center;
 
 		    	&.ead_bar{
-				width: auto;
-				} 
+					width: auto;
+					} 
 
 				&.ead_bar_derecha{
-				width: auto;
-				float: right;
-				}
+					width: auto;
+					float: right;
+					}
 
 				&.ead-bar-dropdown ul {   
-			    list-style-position: inside; 
-				position: absolute; 
-				background: @negro;
-				list-style-type: none;
+				    list-style-position: inside; 
+					position: absolute; 
+					background: @negro;
+					list-style-type: none;
 
 					li{
-					width: 110px; 
-					padding-top: 5px; 
-					padding-left: 1px; 
-					padding-bottom: 5px;
-				    list-style-type: none;
+						width: 110px; 
+						padding-top: 5px; 
+						padding-left: 1px; 
+						padding-bottom: 5px;
+					    list-style-type: none;
 
 						a{
-						display: block; 
-						color: fade(@blanco, 90%);
-						padding: 0;
-						}
+							display: block; 
+							color: fade(@blanco, 90%);
+							padding: 0;
+							}
 					}
 				}
 
 				&.ead-bar-dropdown ul.fallback{
-				padding-top: 5px; 
-				list-style-type: none;
-				z-index:10000;
-					&:hover{
-					display: block; 
+					padding-top: 5px; 
 					list-style-type: none;
-					}
+					z-index:10000;
+
+					&:hover{
+						display: block; 
+						list-style-type: none;
+						}
 
 				}
 
@@ -108,7 +109,6 @@ body{
 				transition: .2s all ease;
 				height: @barra;
 				color: fade(@blanco, 90%);
-				
 
 				&.link{
 					padding: 10px 20px 0px 40px;
@@ -201,12 +201,12 @@ body{
 
 				&:active{ background-color: fade(@blanco, 60%); }
 			}
-
+			
 			}
 		}
 	}
 
-/*--------------Modal--------------*/
+/*--------------------------------Modal--------------------------------*/
 
 	#lean_overlay {
 	    position: fixed;
@@ -228,14 +228,13 @@ body{
 	    width: 500px;
 	    padding: 20px;
         }
-
 }
 
 
-/*--------------------------------Barra de Meta Navegación (Responsive)--------------------------------*/
+/*Responsive*/
 
+/*--------------------------------Pantalla Mediana--------------------------------*/
 
-/*Pantalla mediana*/
 
 @media screen and (min-width: 992px) and (max-width: 1199px){
 
@@ -244,201 +243,202 @@ body{
 	nav.web{
 		
 		ul.menuweb{
-		max-width: 1199px;
-    	}
+			max-width: 1199px;
+	    	}
 
     }
 }
 }
 
-						/*Pantalla pequeña*/
+/*--------------------------------Pantalla pequeña--------------------------------*/
 
-						@media screen and (min-width: 768px) and (max-width: 991px){
 
-						.metabarra {
+@media screen and (min-width: 768px) and (max-width: 991px){
 
-							nav.web{
+.metabarra {
+
+	nav.web{
 					
-								ul.menuweb{
-								padding: 0px 15px 0px 15px;
-								max-width: 991px;
-								font-size: 13px;
+		ul.menuweb{
+			padding: 0px 15px 0px 15px;
+			max-width: 991px;
+			font-size: 13px;
 
-									li{
+			li{
 
-										a{
-											&.link{ padding: 10px 15px 0px 35px; }
+				a{
+					&.link{ padding: 10px 15px 0px 35px; }
 
-											&.iniciarsesion{ padding: 10px 15px 0px 35px; }
+					&.iniciarsesion{ padding: 10px 15px 0px 35px; }
 
-											&.logoead{
-												padding: 6px 15px 0px 15px;
-												font-size: 18px;
-											    }
-										}
+					&.logoead{
+						padding: 6px 15px 0px 15px;
+						font-size: 18px;
+						}
+				}
 
-										img.icono{
-											top: 4px;
-											left: 11px;
-									    	}
+				img.icono{
+					top: 4px;
+					left: 11px;
+					}
 
-										#ead_bar_form{
-											display: none;
-										    }
+				#ead_bar_form{
+					display: none;
+					}
 
-						    		    button.buscar{
-									    	display: block;
-										    }
-			    					}
-								}				
-				        	}
-				        }
-				   		}
+				button.buscar{
+					display: block;
+					}
+			}
+		}				
+	}
+}
+}
 
-												/*Pantalla extra pequeña (Móvil)*/
+/*--------------------------------Pantalla extra pequeña (Móvil)--------------------------------*/
 
-												@media screen and (min-width: 200px) and (max-width: 767px){
+
+@media screen and (min-width: 200px) and (max-width: 767px){
  							
-					 							.metabarra {
-												    display: none;
-													}
+.metabarra {
+	display: none;
+	}
 
-												.metabarramovil{
-													display: inline-block;
-													margin: 0 auto;
-													padding: 0;
-													font-family: @sans;
-													width: 100%;
-													background-color: @negro;
+.metabarramovil{
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0;
+	font-family: @sans;
+	width: 100%;
+	background-color: @negro;
 
-													nav.movil{
+	nav.movil{
 
-														ul.menumovil{
-															margin: 0 auto;
-															padding: 0px 10px 0px 10px;
-															max-width: 767px;
-															font-size: 13px;
-															height: @barra;
+		ul.menumovil{
+			margin: 0 auto;
+			padding: 0px 10px 0px 10px;
+			max-width: 767px;
+			font-size: 13px;
+			height: @barra;
 
-															li{
-																float: left;
-																list-style: none;
-																display: inline;
-																margin: 0 auto;
-																padding: 0;
-																position: relative;
-																height: @barra;
-																text-align: center;
+			li{
+				float: left;
+				list-style: none;
+				display: inline;
+				margin: 0 auto;
+				padding: 0;
+				position: relative;
+				height: @barra;
+				text-align: center;
 
-															    &.ead_bar{
-																width: auto;
-																} 
+				&.ead_bar{
+					width: auto;
+				} 
 
-																&.ead_bar_derecha{
-																width: auto;
-																float: right;
-																}
+				&.ead_bar_derecha{
+					width: auto;
+					float: right;
+				}
 
-																&.ead-bar-dropdown ul {   
-															    list-style-position: inside; 
-																position: absolute; 
-																background: @negro;
-																list-style-type: none;
+				&.ead-bar-dropdown ul {   
+					list-style-position: inside; 
+					position: absolute; 
+					background: @negro;
+					list-style-type: none;
 
-																	li{
-																	width: 110px; 
-																	padding-top: 5px; 
-																	padding-left: 1px; 
-																	padding-bottom: 5px;
-																    list-style-type: none;
+					li{
+						width: 110px; 
+						padding-top: 5px; 
+						padding-left: 1px; 
+						padding-bottom: 5px;
+						list-style-type: none;
 
-																		a{
-																		display: block; 
-																		color: fade(@blanco, 90%);
-																		padding: 0;
-																		}
-																	}
-																}
+						a{
+							display: block; 
+							color: fade(@blanco, 90%);
+							padding: 0;
+						}
+					}
+				}
 
-																&.ead-bar-dropdown ul.fallback{
-																padding-top: 5px; 
-																list-style-type: none;
-																z-index:10000;
-																	&:hover{
-																	display: block; 
-																	list-style-type: none;
-																	}
+				&.ead-bar-dropdown ul.fallback{
+					padding-top: 5px; 
+					list-style-type: none;
+					z-index:10000;
+																	
+				&:hover{
+					display: block; 
+					list-style-type: none;
+					}
+				}
 
-																}
+				a{
+					text-decoration: none;
+					display: inline-block;
+					transition: .2s all ease;
+					height: @barra;
 
-															    a{
-															    	text-decoration: none;
-																	display: inline-block;
-																	transition: .2s all ease;
-																	height: @barra;
+					&.link{
+						padding: 10px 25px 0px 25px;
+						color: fade(@blanco, 90%);
+						font-weight: 300;
+						}
 
-																	&.link{
-																		padding: 10px 25px 0px 25px;
-																		color: fade(@blanco, 90%);
-																		font-weight: 300;
-																		}
+					&.desplegable{
+						margin: 0px 10px 0px 0px;
+						}
 
-																	&.desplegable{
-																		margin: 0px 10px 0px 0px;
-																		}
+					&.iniciarsesion{ 
+						padding: 10px 25px 0px 25px; 
+						}
 
-																	&.iniciarsesion{ 
-																		padding: 10px 25px 0px 25px; 
-																		}
+					&.logoead{
+						padding: 6px 10px 0px 10px;
+						color: @rojo-claro;
+						font-size: 18px;
+						font-weight: 500;
+						}
 
-																	&.logoead{
-																		padding: 6px 10px 0px 10px;
-																		color: @rojo-claro;
-																		font-size: 18px;
-																		font-weight: 500;
-																	    }
+					&.active{
+						background-image: url("https://s3.amazonaws.com/Ead/ead_bar_images/arrow.gif");
+						background-repeat: no-repeat;
+						background-position: 50% 100%;
+						background-size: 18px;
+						}
 
-																	&.active{
-																		background-image: url("https://s3.amazonaws.com/Ead/ead_bar_images/arrow.gif");
-																		background-repeat: no-repeat;
-																		background-position: 50% 100%;
-																		background-size: 18px;
-																	    }
+					&:hover{ background-color: fade(@blanco, 10%); }
 
-																	&:hover{ background-color: fade(@blanco, 10%); }
+				}
 
-															    }
+				img.icono{
+					display: block;
+					position: absolute;
+					top: 5px;
+					left: 16px;
+					}
 
-															    img.icono{
-															    	display: block;
-															    	position: absolute;
-																	top: 5px;
-																	left: 16px;
-															    	}
+				button.buscar{ 
+					display: block;
+					width: 40px;
+					float: right;
+					height: @barra;
+					margin: 0px 10px 0px 0px;
+					padding: 0;
+					cursor: pointer;
+					border: none;
+					outline: none;
+					background-color: fade(@blanco, 50%);
+					background-image: url('https://s3.amazonaws.com/Ead/ead_bar_images/icon-busqueda.gif');
+					background-position: center;
+					background-repeat: no-repeat; 
 
-															    button.buscar{ 
-															    	display: block;
-															    	width: 40px;
-															    	float: right;
-																	height: @barra;
-																    margin: 0px 10px 0px 0px;
-																    padding: 0;
-																    cursor: pointer;
-																    border: none;
-																    outline: none;
-																    background-color: fade(@blanco, 50%);
-																    background-image: url('https://s3.amazonaws.com/Ead/ead_bar_images/icon-busqueda.gif');
-																	background-position: center;
-																	background-repeat: no-repeat; 
+					&:hover{ background-color: fade(@blanco, 60%); }
 
-																	&:hover{ background-color: fade(@blanco, 60%); }
+					&:active{ background-color: fade(@blanco, 60%); }
 
-																	&:active{ background-color: fade(@blanco, 60%); }
-
-																	}
-											
-															}
-														}
-											    	}
-										        }
-												}
+					}							
+			}
+		}
+	}
+}
+}
