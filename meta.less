@@ -150,20 +150,23 @@ body{
 				margin-top: 0;
 				height: @barra;
 				padding: 0px 10px 0px 0px;
-				width: 210px;
+				width: 180px;
 			    }
 
-		    input[type='search']{
+		    input[type='text']{
 		    	display: inline-block;
 			    background: fade(@blanco, 15%);
 				width: 100%;
 			    border: none;
 			    font-size: 12px;
 			    font-weight: 100;
+			    vertical-align: middle;
+			    border-radius: 0;
 			    color: @blanco;
-			    height: auto;
+			    height: @barra;
 			    margin: 0 auto;
 			    padding: 12px 10px 11px 10px;
+			    box-sizing: border-box;
 			    
 
 			    &:focus{
@@ -351,10 +354,21 @@ body{
 
 																		a{
 																		display: block; 
-																		color: fade(@blanco, 70%);
+																		color: fade(@blanco, 90%);
 																		padding: 0;
 																		}
 																	}
+																}
+
+																&.ead-bar-dropdown ul.fallback{
+																padding-top: 5px; 
+																list-style-type: none;
+																z-index:10000;
+																	&:hover{
+																	display: block; 
+																	list-style-type: none;
+																	}
+
 																}
 
 															    a{
@@ -420,27 +434,6 @@ body{
 																	&:hover{ background-color: fade(@blanco, 60%); }
 
 																	&:active{ background-color: fade(@blanco, 60%); }
-
-																	}
-
-																button.sitios{ 
-															    	display: block;
-															    	width: 50px;
-															    	float: right;
-																	height: @barra;
-																    margin: 0 auto;
-																    padding: 0;
-																    cursor: pointer;
-																    border: none;
-																    outline: none;
-																    background-color: @negro;
-																    background-image: url('../../../img/menu.png');
-																	background-position: center;
-																	background-repeat: no-repeat; 
-
-																	&:hover{ background-color: fade(@blanco, 10%); }
-
-																	&:active{ background-color: fade(@blanco, 10%); }
 
 																	}
 											
