@@ -150,7 +150,7 @@ body{
 				margin-top: 0;
 				height: @barra;
 				padding: 0px 10px 0px 0px;
-				width: 180px;
+				width: 210px;
 			    }
 
 		    input[type='search']{
@@ -184,7 +184,7 @@ body{
 		    	width: 40px;
 		    	float: right;
 				height: @barra;
-			    margin: 0 auto;
+			    margin: 0px 10px 0px 0px;
 			    background-color: @negro;
 			    padding: 0;
 			    cursor: pointer;
@@ -195,7 +195,9 @@ body{
 				background-position: center;
 				background-repeat: no-repeat;
 
-				&:hover{ background-color: fade(@blanco, 10%)}
+				&:hover{ background-color: fade(@blanco, 60%); }
+
+				&:active{ background-color: fade(@blanco, 60%); }
 			}
 
 			}
@@ -365,7 +367,7 @@ body{
 																		background-size: 18px;
 																	    }
 
-																	&:hover{ background-color: fade(@blanco, 5%); }
+																	&:hover{ background-color: fade(@blanco, 10%); }
 
 															    }
 
@@ -381,16 +383,21 @@ body{
 															    	width: 40px;
 															    	float: right;
 																	height: @barra;
-																    margin: 0 auto;
+																    margin: 0px 10px 0px 0px;
 																    background-color: @negro;
 																    padding: 0;
 																    cursor: pointer;
 																    border: none;
 																    outline: none;
 																    background-color: fade(@blanco, 50%);
-																    background-image: url('../../../img/icon-busqueda.gif');
+																    background-image: url('https://s3.amazonaws.com/Ead/ead_bar_images/icon-busqueda.gif');
 																	background-position: center;
 																	background-repeat: no-repeat; 
+
+																	&:hover{ background-color: fade(@blanco, 60%); }
+
+																	&:active{ background-color: fade(@blanco, 60%); }
+
 																	}
 											
 															}
