@@ -321,6 +321,24 @@ body{
 			font-size: 13px;
 			height: @barra;
 
+			&.desplegable{
+
+				li.ead_bar{
+					list-style: none;
+					display: inline;
+					margin: 0 auto;
+					padding: 0;
+					position: relative;
+					text-align: center;
+
+					a.link{
+						text-decoration: none;
+						color: fade(@blanco, 90%);
+						font-weight: 300;
+						}
+				}
+			}
+
 			li{
 				float: left;
 				list-style: none;
@@ -358,17 +376,6 @@ body{
 							color: fade(@blanco, 90%);
 							padding: 0;
 						}
-					}
-				}
-
-				&.ead-bar-dropdown ul.fallback{
-					padding-top: 5px; 
-					list-style-type: none;
-					z-index:10000;
-																	
-				&:hover{
-					display: block; 
-					list-style-type: none;
 					}
 				}
 
