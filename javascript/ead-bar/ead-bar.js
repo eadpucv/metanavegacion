@@ -34,15 +34,41 @@
 
 				// Asigno Textos y Url's
 				$("#ead-bar-dropdown_li").prepend("<a href='#' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>"+ options.name + " " + options.lastname + "</a>");
-				$("#ead_bar_dropdown-perfil").attr('href','http://wiki');
-				$("#ead_bar_dropdown-account").attr('href',"http://personas.ead.pucv.cl/usuarios/edit/"+options.id);
-				$("#ead_bar_dropdown-end_session").attr('href',options.site_logout_url);
-
 				$("#ead-bar-dropdown_li-movil").prepend("<a href='#' id='ead_bar_dropdown-session-movil' class='link iniciarsesion'><img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>"+ options.name + " " + options.lastname + "</a>");
-				$("#ead_bar_dropdown-perfil-movil").attr('href','http://wiki');
-				$("#ead_bar_dropdown-account-movil").attr('href',"http://personas.ead.pucv.cl/usuarios/edit/"+options.id);
-				$("#ead_bar_dropdown-end_session-movil").attr('href',options.site_logout_url);
+				
+				// Perfil de la Wiki
+				if (options.wikipage.length > 0) {
+					if (options.wikipage.indexOf("http://wiki.ead.pucv.cl") > -1){
+						$("#ead_bar_dropdown-perfil-movil").attr('href',options.wikipage);
+						$("#ead_bar_dropdown-perfil").attr('href',options.wikipage);
+					} else {
+						$("#ead_bar_dropdown-perfil-movil").attr('href',"http://wiki.ead.pucv.cl/index.php?title="+options.wikipage);
+						$("#ead_bar_dropdown-perfil").attr('href',"http://wiki.ead.pucv.cl/index.php?title="+options.wikipage);
+					}
+				} else {
+					$("#ead_bar_dropdown-perfil, #ead_bar_dropdown-perfil-movil").on( "click", function() {
+						alert("Aun no has definido tu pagina de \"Casiopea\" en tu perfil de personas.");
+					});					
+				}
 
+				// Admin?				
+				if (options.admin === "si") {
+					$("#ead_bar_dropdown-admin").attr('href','http://personas.ead.pucv.cl/admin/list');									
+					$("#ead_bar_dropdown-admin-movil").attr('href','http://personas.ead.pucv.cl/admin/list');														
+				} else {
+					$("#ead_bar_dropdown-admin").hide();
+					$("#ead_bar_dropdown-admin-movil").hide();					
+				}
+
+				// Editar Perfil en Personas
+				$("#ead_bar_dropdown-account-movil").attr('href',"http://personas.ead.pucv.cl/user/edit/"+options.id);
+				$("#ead_bar_dropdown-account").attr('href',"http://personas.ead.pucv.cl/usuarios/edit/"+options.id);
+				
+				// Logout
+				$("#ead_bar_dropdown-end_session-movil").attr('href',options.site_logout_url);
+				$("#ead_bar_dropdown-end_session").attr('href',options.site_logout_url);
+				
+				// Boton en Movil
 				$("#ead_bar_dropdown-session-movil").click(function() {
 					$("#ead_bar_user_menu-movil").toggle();
 				});
