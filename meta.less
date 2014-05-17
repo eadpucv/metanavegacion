@@ -70,37 +70,39 @@ body{
 					float: right;
 					}
 
-				&.ead-bar-dropdown ul {   
-				    list-style-position: inside; 
-					position: absolute; 
-					background: @negro;
-					list-style-type: none;
-
-					li{
-						width: 110px; 
-						padding-top: 5px; 
-						padding-left: 1px; 
-						padding-bottom: 5px;
-					    list-style-type: none;
-
-						a{
-							display: block; 
-							color: fade(@blanco, 90%);
-							padding: 0;
-							}
-					}
-				}
-
 				&.ead-bar-dropdown ul.fallback{
-					padding-top: 5px; 
+					list-style-position: inside; 
+					position: absolute;
+					padding: 0;
+					margin: 0 auto;
+					background: fade(@negro, 50%);
 					list-style-type: none;
 					z-index:10000;
+					height: auto;
+					left: 10px;
+					width: 90%;
 
 					&:hover{
 						display: block; 
 						list-style-type: none;
 						}
 
+					li.menu-dropdown{
+						position: relative;
+					    list-style-type: none;
+					    margin: 0 auto;
+					    width: 100%;
+					    padding: 0;
+					    text-align: left;
+
+						    a.link-dropdown{
+						    display:block;
+							font-weight: 300;
+							padding: 10px 0px 10px 30px;
+							width: 100%;
+							height: 100%;
+							}
+						}
 				}
 
 		    a{
@@ -116,11 +118,16 @@ body{
 					}
 
 				&.iniciarsesion{ 
-					padding: 10px 20px 0px 40px; 
-					background-image: url("../../../img/icon-userarrow.gif");
+					padding: 10px 20px 0px 40px;
+					background-display: none;
+					background-image: url("../../../img/icon-user-arrow");
 					background-repeat: no-repeat;
-					background-position: 94% 53%;
-					background-size: 11px;
+					background-position: 94% 55%;
+					background-size: 10px; 
+
+					&:hover{
+						background-color: @negro;
+						}
 					}
 
 				&.logoead{
@@ -383,10 +390,10 @@ body{
 
 					&.iniciarsesion{ 
 						padding: 10px 15px 0px 35px;
-						background-image: url("../../../img/icon-userarrow.gif");
+						background-image: url("../../../img/icon-user-arrow");
 						background-repeat: no-repeat;
-						background-position: 98% 53%;
-						background-size: 10px;
+						background-position: 97% 53%;
+						background-size: 10px; 
 						}
 
 					&.active{
