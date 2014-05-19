@@ -30,7 +30,7 @@
 				  	function () {
 						$('ul', this).stop().slideUp(100);
 				  	}
-				);	
+				);
 
 				// Asigno Textos y Url's
 				$("#ead-bar-dropdown_li").prepend("<a href='#' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='icono' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>"+ options.name + " " + options.lastname + "</a>");
@@ -70,7 +70,7 @@
 				
 				// Boton en Movil
 				$("#ead_bar_dropdown-session-movil").click(function() {
-					$("#ead_bar_user_menu-movil").toggle();
+				$("#ead_bar_user_menu-movil").toggle();
 				});
 				
 

@@ -75,17 +75,13 @@ body{
 					position: absolute;
 					padding: 0;
 					margin: 0 auto;
-					background: fade(@negro, 70%);
+					background: fade(@negro, 40%);
 					list-style-type: none;
+					box-shadow: 1px;
 					z-index:10000;
 					height: auto;
-					left: 10px;
-					width: 90%;
+					width: 100%;
 
-					&:hover{
-						display: block; 
-						list-style-type: none;
-						}
 
 					li.menu-dropdown{
 						position: relative;
@@ -93,17 +89,21 @@ body{
 					    margin: 0 auto;
 					    width: 100%;
 					    padding: 0;
-					    text-align: left;
+					    text-align: right;
 
 						    a.link-dropdown{
-						    color: @blanco;
+						    color: @gris;
 						    display:block;
 							font-weight: 300;
-							padding: 10px 0px 10px 30px;
+							padding: 10px 30px 10px 0px;
 							width: 100%;
 							height: 100%;
 							}
 						}
+				}
+
+				&.open{
+					background: @gris;
 				}
 
 		    a{
@@ -124,11 +124,7 @@ body{
 					background-image: url("../../../img/icon-user-arrow");
 					background-repeat: no-repeat;
 					background-position: 94% 55%;
-					background-size: 10px; 
-
-					&:hover{
-						background-color: @negro;
-						}
+					background-size: 10px;
 					}
 
 				&.logoead{
