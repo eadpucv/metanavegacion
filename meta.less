@@ -95,7 +95,7 @@ body{
 						    color: fade(@blanco, 90%);
 						    display: block;
 							font-weight: 300;
-							padding: 10px 0px 10px 30px;
+							padding: 10px 0px 10px 20px;
 							width: 100%;
 							height: 100%;
 
@@ -117,14 +117,15 @@ body{
 					}
 
 				&.iniciarsesion{ 
-					padding: 10px 30px 0px 40px;
-					background-display: none;
-					background-image: url("../../../img/icon-user-arrow");
-					background-repeat: no-repeat;
-					background-position: 88% 55%;
-					background-size: 10px;
+					padding: 10px 20px 0px 40px;
 
-						&:hover{ background-color: @negro; }
+						&:hover{ background-color: fade(@blanco, 10%); }
+					}
+
+				&.usuario{
+					padding: 10px 30px 0px 20px;
+
+						&:hover{ background-color: fade(@blanco, 10%) }
 					}
 
 				&.logoead{
@@ -154,13 +155,30 @@ body{
 				font-weight: 100;
 				}
 
-		    img.icono{
-		    	display: block;
-		    	position: absolute;
-				top: 5px;
-				left: 16px;
-				right: 0px;
-		    	}
+			img{
+				position: absolute;
+
+				&.icono{
+					display: block;
+					top: 5px;
+					left: 16px;
+					right: 0px;
+					}
+
+				&.usuario{
+					display: block;
+					top: 4px;
+					left: 16px;
+					right: 0px;
+					}
+
+				&.flecha-usuario{
+					display: block;
+					top: 19px;
+					right: 18px;
+					width: 9px;
+					}
+			}
 
 		    #ead_bar_form{
 				float: left;
@@ -261,14 +279,23 @@ body{
 
 			li{
 
+				&.ead-bar-dropdown ul.fallback{
+
+					li.menu-dropdown{
+
+						a.link-dropdown{ padding: 10px 0px 10px 16px; }
+					}
+				}
+
 				a{
 					&.link{ padding: 10px 15px 0px 35px; }
 
 					&.iniciarsesion{ 
-						padding: 10px 25px 0px 35px;
-						background-repeat: no-repeat;
-						background-position: 90% 53%;
-						background-size: 10px; 
+						padding: 10px 15px 0px 35px; 
+						}
+
+					&.usuario{
+						padding: 10px 25px 0px 15px;
 						}
 
 					&.logoead{
@@ -281,10 +308,25 @@ body{
 					display: inline-block;
 					}
 
-				img.icono{
-					top: 3px;
-					left: 11px;
-					}
+				img{
+
+					&.icono{
+						top: 4px;
+						left: 11px;
+						}
+
+					&.usuario{
+						top: 3px;
+						left: 11px;
+						}
+
+					&.flecha-usuario{
+						display: block;
+						top: 18px;
+						right: 13px;
+						width: 9px;
+						}
+				}
 
 				#ead_bar_form{
 					display: none;
@@ -323,7 +365,7 @@ body{
 			position: absolute;
 			padding: 0;
 			margin: 0 auto;
-			font-size: 14px;
+			font-size: 13px;
 			background: fade(@negro, 80%);
 			list-style-type: none;
 			z-index:10000;
@@ -339,10 +381,11 @@ body{
 					text-align: left;
 
 						a.link-toggle{
+							display: block;
 							text-decoration: none;
 							color: fade(@blanco, 90%);
 							font-weight: 300;
-							padding: 10px 20px;
+							padding: 10px 0px 10px 35px;
 							width: 100%;
 							height: 100%;
 
@@ -391,15 +434,16 @@ body{
 						}
 
 					&.iniciarsesion{ 
-						padding: 10px 25px 0px 35px;
-						background-image: url("../../../img/icon-user-arrow");
-						background-repeat: no-repeat;
-						background-position: 90% 53%;
-						background-size: 10px; 
+						padding: 10px 15px 0px 35px;
 
-						&:hover{ background-color: @negro; }
+						&:hover{ background-color: fade(@blanco, 10%); }
+					}
 
-						}
+					&.usuario{
+						padding: 10px 25px 0px 15px; 
+
+						&:hover{ background-color: fade(@blanco, 10%) }
+					}
 
 					&.active{
 						background-image: url("https://s3.amazonaws.com/Ead/ead_bar_images/arrow.gif");
@@ -421,12 +465,28 @@ body{
 					font-weight: 100;
 					}
 
-				img.icono{
-					display: block;
+				img{
 					position: absolute;
-					top: 3px;
-					left: 11px;
-					}
+
+					&.icono{
+						display: block;
+						top: 3px;
+						left: 11px;
+						}
+
+					&.usuario{
+						display: block;
+						top: 3px;
+						left: 11px;
+						}
+
+					&.flecha-usuario{
+						display: block;
+						top: 18px;
+						right: 13px;
+						width: 9px;
+						}
+				}
 
 				button.buscar{ 
 					display: block;
