@@ -8,6 +8,7 @@ Barra de Meta Navegación para los servicios digitales de la e[ad]
 @negro: 				rgba(25, 26, 25, 1);
 @gris:                  rgba(69, 71, 71, 1);
 @blanco: 				rgba(255, 255, 255, 1);
+@rojo:					rgba(172, 70, 67, 1);
 @rojo-claro: 			rgba(199, 81, 77, 1);
 
 //Tipografía
@@ -73,14 +74,19 @@ body{
 				&.ead-bar-dropdown ul.fallback{
 					list-style-position: inside; 
 					position: absolute;
-					padding: 0;
+					padding: 8px 0px;
 					margin: 0 auto;
-					background: fade(@negro, 80%);
+					background: fade(@negro, 15%);
 					list-style-type: none;
 					box-shadow: 1px;
 					z-index:10000;
 					height: auto;
 					width: 100%;
+					box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+					border-top: none;
+					border-bottom: 1px solid fade(@gris, 7%);
+					border-left: 1px solid fade(@gris, 7%);
+					border-right: 1px solid fade(@gris, 7%);
 
 
 					li.menu-dropdown{
@@ -94,14 +100,17 @@ body{
 					    text-align: left;
 
 						    a.link-dropdown{
-						    color: fade(@blanco, 90%);
+						    color: @negro;
 						    display: block;
 							font-weight: 300;
-							padding: 12px 0px 12px 20px;
+							padding: 8px 0px 8px 20px;
 							width: auto;
 							height: auto;
 
-								&:hover{ background-color: @negro; }
+								&:hover{ 
+									background-color: fade(@negro, 10%);
+									color: @rojo; 
+									}
 							}
 						}
 				}
@@ -112,10 +121,10 @@ body{
 				transition: .2s all ease;
 				height: @barra;
 				color: fade(@blanco, 90%);
+				font-weight: 300;
 
 				&.link{
 					padding: 10px 20px 0px 40px;
-					font-weight: 300;
 					}
 
 				&.iniciarsesion{ 
@@ -126,8 +135,19 @@ body{
 
 				&.usuario{
 					padding: 10px 30px 0px 20px;
+					background-image: url("../../../img/dropdown-arrow-inactive.gif");
+					background-repeat: no-repeat;
+					background-position: 88% 100%;
+					background-size: 18px; 
 
-						&:hover{ background-color: fade(@blanco, 10%) }
+						&:hover{ background-color: @negro }
+
+						&:focus{
+							background-image: url("../../../img/dropdown-arrow-active.gif");
+							background-repeat: no-repeat;
+							background-position: 88% 100%;
+							background-size: 18px;
+							}
 
 					}
 
@@ -286,7 +306,7 @@ body{
 
 					li.menu-dropdown{
 
-						a.link-dropdown{ padding: 10px 0px 10px 16px; }
+						a.link-dropdown{ padding: 8px 0px 8px 16px; }
 					}
 				}
 
@@ -299,6 +319,12 @@ body{
 
 					&.usuario{
 						padding: 10px 25px 0px 15px;
+						background-position: 91% 100%;
+
+						&:focus{
+							background-position: 91% 100%;
+							}
+
 						}
 
 					&.logoead{
@@ -366,14 +392,19 @@ body{
 		ul.desplegable{
 			list-style-position: inside; 
 			position: absolute;
-			padding: 0;
+			padding: 8px 0px;
 			margin: 0 auto;
-			font-size: 13px;
-			background: fade(@negro, 80%);
+			font-size: 14px;
+			background: fade(@negro, 10%);
 			list-style-type: none;
 			z-index:10000;
 			height: auto;
 			width: 100%;
+			border-top: none;
+			box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+			border-bottom: 1px solid fade(@gris, 7%);
+			border-left: 1px solid fade(@gris, 7%);
+			border-right: 1px solid fade(@gris, 7%);
 
 				li.menu-toggle{
 					position: relative;
@@ -386,13 +417,16 @@ body{
 						a.link-toggle{
 							display: block;
 							text-decoration: none;
-							color: fade(@blanco, 90%);
+							color: @negro;
 							font-weight: 300;
-							padding: 10px 0px 10px 35px;
+							padding: 8px 0px 8px 35px;
 							width: 100%;
 							height: 100%;
 
-							&:hover{ background-color: @negro; }
+							&:hover{ 
+								background-color: fade(@negro, 10%);
+								color: @rojo; 
+								}
 
 							}
 				}
@@ -429,29 +463,31 @@ body{
 					display: inline-block;
 					transition: .2s all ease;
 					height: @barra;
+					color: fade(@blanco, 90%);
+					font-weight: 300;
 
 					&.link{
 						padding: 10px 25px 0px 25px;
-						color: fade(@blanco, 90%);
-						font-weight: 300;
 						}
 
 					&.iniciarsesion{ 
 						padding: 10px 15px 0px 35px;
-
-						&:hover{ background-color: fade(@blanco, 10%); }
-					}
+						}
 
 					&.usuario{
-						padding: 10px 25px 0px 15px; 
+						padding: 10px 25px 0px 15px;
+						background-image: url("../../../img/dropdown-arrow-inactive.gif");
+						background-repeat: no-repeat;
+						background-position: 91% 100%;
+						background-size: 18px; 
 
-						&:hover{ background-color: fade(@blanco, 10%) }
+						&:hover{ background-color: @negro }
 
 						&:focus{
-							background-image: url("https://s3.amazonaws.com/Ead/ead_bar_images/arrow.gif");
+							background-image: url("../../../img/dropdown-arrow-active.gif");
 							background-repeat: no-repeat;
-							background-position: 86% 100%;
-							background-size: 14px;
+							background-position: 91% 100%;
+							background-size: 18px;
 							}
 
 					}

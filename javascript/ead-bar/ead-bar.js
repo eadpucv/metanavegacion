@@ -22,19 +22,14 @@
 			if (options.id.length > 0 && options.name.length > 0 && options.mail.length > 0) {
 				
 				// Habilitar dropdown
-				$('li.ead-bar-dropdown ul').hide();
-				$('nav li.ead-bar-dropdown').hover(
-				  	function () {
-						$('ul', this).stop().slideDown(100);
-				  	},
-				  	function () {
-						$('ul', this).stop().slideUp(100);
-				  	}
-				);
+				$("#ead-bar-dropdown_li").click(function() {
+				$("#ead_bar_dropdown_sub_ul").toggle();
+				});
+
 
 				// Asigno Textos y Url's
-				$("#ead-bar-dropdown_li").prepend("<a href='#' id='ead_bar_dropdown-session' class='link usuario'><img class='flecha-usuario' src='img/icon-user-arrow.gif'>"+ options.name + " " + options.lastname + "</a>");
-				$("#ead-bar-dropdown_li-movil").prepend("<a href='#' id='ead_bar_dropdown-session-movil' class='link usuario'><img class='flecha-usuario' src='img/icon-user-arrow.gif'>"+ options.name + " " + options.lastname + "</a>");
+				$("#ead-bar-dropdown_li").prepend("<a href='#' id='ead_bar_dropdown-session' class='usuario'><img class='flecha-usuario' src='img/icon-user-arrow.gif'>"+ options.name + " " + options.lastname + "</a>");
+				$("#ead-bar-dropdown_li-movil").prepend("<a href='#' id='ead_bar_dropdown-session-movil' class='usuario'><img class='flecha-usuario' src='img/icon-user-arrow.gif'>"+ options.name + " " + options.lastname + "</a>");
 				
 				// Perfil de la Wiki
 				if (options.wikipage.length > 0) {
@@ -76,8 +71,8 @@
 
 			} else {
 				// Habilitar boton y link para iniciar session
-				$("#ead-bar-dropdown_li").prepend("<a href='"+options.site_login_url+"' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='usuario' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>Iniciar sesión</a>")
-				$("#ead-bar-dropdown_li-movil").prepend("<a href='"+options.site_login_url+"' id='ead_bar_dropdown-session' class='link iniciarsesion'><img class='usuario' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>Iniciar sesión</a>")				
+				$("#ead-bar-dropdown_li").prepend("<a href='"+options.site_login_url+"' id='ead_bar_dropdown-session' class='iniciarsesion'><img class='usuario' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>Iniciar sesión</a>")
+				$("#ead-bar-dropdown_li-movil").prepend("<a href='"+options.site_login_url+"' id='ead_bar_dropdown-session' class='iniciarsesion'><img class='usuario' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-usuario.gif'>Iniciar sesión</a>")				
 			}
 
 			// Identificar Sitio
@@ -87,3 +82,16 @@
 		return this;
 	};
 }( jQuery ));
+
+
+//*Dropdown por si se necesita volver a usar...
+
+//$('li.ead-bar-dropdown ul').hide();
+				//$('nav li.ead-bar-dropdown').hover(
+				  	//function () {
+						//$('ul', this).stop().slideDown(100);
+				  	//},
+				  	//function () {
+						//$('ul', this).stop().slideUp(100);
+				  	//}
+				//);
