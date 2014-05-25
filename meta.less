@@ -117,11 +117,11 @@ body{
 					}
 
 				&.iniciarsesion{ 
-					padding: 10px 20px 0px 40px;
+					padding: 10px 30px 0px 40px;
 					background-display: none;
 					background-image: url("../../../img/icon-user-arrow");
 					background-repeat: no-repeat;
-					background-position: 94% 55%;
+					background-position: 88% 55%;
 					background-size: 10px;
 
 						&:hover{ background-color: @negro; }
@@ -144,6 +144,15 @@ body{
 				&:hover{ background-color: fade(@blanco, 10%); }
 
 		    }
+
+		    span.linea{
+				display: none;
+				color: @blanco;
+				padding: 6px 5px 0px 0px;
+				height: @barra;
+				font-size: 17px;
+				font-weight: 100;
+				}
 
 		    img.icono{
 		    	display: block;
@@ -192,22 +201,23 @@ body{
 
 		    button.buscar{
 		    	display: none;
-		    	width: 40px;
-		    	float: right;
+				width: 45px;
+				float: right;
 				height: @barra;
-			    margin: 0px 10px 0px 0px;
-			    padding: 0;
-			    cursor: pointer;
-			    border: none;
-			    outline: none;
-			    background-color: fade(@blanco, 50%);
-			    background-image: url('https://s3.amazonaws.com/Ead/ead_bar_images/icon-busqueda.gif');
+				margin: 0px 5px 0px 0px;
+				padding: 0;
+				cursor: pointer;
+				border: none;
+				outline: none;
+				background-color: @negro;
+				background-image: url("../../../img/icon-busqueda-movil.png");
+				background-size: 25px;
 				background-position: center;
-				background-repeat: no-repeat;
+				background-repeat: no-repeat; 
 
-				&:hover{ background-color: fade(@blanco, 60%); }
+				&:hover{ background-color: fade(@blanco, 10%); }
 
-				&:active{ background-color: fade(@blanco, 60%); }
+				&:active{ background-color: fade(@blanco, 10%); }
 			}
 
 			}
@@ -255,9 +265,9 @@ body{
 					&.link{ padding: 10px 15px 0px 35px; }
 
 					&.iniciarsesion{ 
-						padding: 10px 15px 0px 35px;
+						padding: 10px 25px 0px 35px;
 						background-repeat: no-repeat;
-						background-position: 98% 53%;
+						background-position: 90% 53%;
 						background-size: 10px; 
 						}
 
@@ -267,8 +277,12 @@ body{
 						}
 				}
 
+				span.linea{
+					display: inline-block;
+					}
+
 				img.icono{
-					top: 4px;
+					top: 3px;
 					left: 11px;
 					}
 
@@ -321,14 +335,16 @@ body{
 					list-style-type: none;
 					margin: 0 auto;
 					width: 100%;
-					padding: 10px 10px;
+					padding: 0;
 					text-align: left;
 
 						a.link-toggle{
 							text-decoration: none;
 							color: fade(@blanco, 90%);
 							font-weight: 300;
+							padding: 10px 20px;
 							width: 100%;
+							height: 100%;
 
 							&:hover{ background-color: @negro; }
 
@@ -375,11 +391,14 @@ body{
 						}
 
 					&.iniciarsesion{ 
-						padding: 10px 15px 0px 35px;
+						padding: 10px 25px 0px 35px;
 						background-image: url("../../../img/icon-user-arrow");
 						background-repeat: no-repeat;
-						background-position: 97% 53%;
+						background-position: 90% 53%;
 						background-size: 10px; 
+
+						&:hover{ background-color: @negro; }
+
 						}
 
 					&.active{
@@ -393,31 +412,41 @@ body{
 
 				}
 
+				span.linea{
+					display: inline-block;
+					color: @blanco;
+					padding: 6px 5px 0px 0px;
+					height: @barra;
+					font-size: 17px;
+					font-weight: 100;
+					}
+
 				img.icono{
 					display: block;
 					position: absolute;
-					top: 5px;
+					top: 3px;
 					left: 11px;
 					}
 
 				button.buscar{ 
 					display: block;
-					width: 40px;
+					width: 45px;
 					float: right;
 					height: @barra;
-					margin: 0px 10px 0px 0px;
+					margin: 0px 5px 0px 0px;
 					padding: 0;
 					cursor: pointer;
 					border: none;
 					outline: none;
-					background-color: fade(@blanco, 50%);
-					background-image: url('https://s3.amazonaws.com/Ead/ead_bar_images/icon-busqueda.gif');
+					background-color: @negro;
+					background-image: url("../../../img/icon-busqueda-movil.png");
+					background-size: 25px;
 					background-position: center;
 					background-repeat: no-repeat; 
 
-					&:hover{ background-color: fade(@blanco, 60%); }
+					&:hover{ background-color: fade(@blanco, 10%); }
 
-					&:active{ background-color: fade(@blanco, 60%); }
+					&:active{ background-color: fade(@blanco, 10%); }
 
 					}							
 			}
