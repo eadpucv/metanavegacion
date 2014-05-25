@@ -75,7 +75,7 @@ body{
 					position: absolute;
 					padding: 0;
 					margin: 0 auto;
-					background: fade(@negro, 40%);
+					background: fade(@negro, 80%);
 					list-style-type: none;
 					box-shadow: 1px;
 					z-index:10000;
@@ -89,21 +89,19 @@ body{
 					    margin: 0 auto;
 					    width: 100%;
 					    padding: 0;
-					    text-align: right;
+					    text-align: left;
 
 						    a.link-dropdown{
-						    color: @gris;
-						    display:block;
+						    color: fade(@blanco, 90%);
+						    display: block;
 							font-weight: 300;
-							padding: 10px 30px 10px 0px;
+							padding: 10px 0px 10px 30px;
 							width: 100%;
 							height: 100%;
+
+								&:hover{ background-color: @negro; }
 							}
 						}
-				}
-
-				&.open{
-					background: @gris;
 				}
 
 		    a{
@@ -125,6 +123,8 @@ body{
 					background-repeat: no-repeat;
 					background-position: 94% 55%;
 					background-size: 10px;
+
+						&:hover{ background-color: @negro; }
 					}
 
 				&.logoead{
@@ -304,30 +304,44 @@ body{
 
 	nav.movil{
 
+		ul.desplegable{
+			list-style-position: inside; 
+			position: absolute;
+			padding: 0;
+			margin: 0 auto;
+			font-size: 14px;
+			background: fade(@negro, 80%);
+			list-style-type: none;
+			z-index:10000;
+			height: auto;
+			width: 100%;
+
+				li.menu-toggle{
+					position: relative;
+					list-style-type: none;
+					margin: 0 auto;
+					width: 100%;
+					padding: 10px 10px;
+					text-align: left;
+
+						a.link-toggle{
+							text-decoration: none;
+							color: fade(@blanco, 90%);
+							font-weight: 300;
+							width: 100%;
+
+							&:hover{ background-color: @negro; }
+
+							}
+				}
+			}
+
 		ul.menumovil{
 			margin: 0 auto;
 			padding: 0px 10px 0px 10px;
 			max-width: 767px;
 			font-size: 13px;
 			height: @barra;
-
-			&.desplegable{
-
-				li.ead_bar{
-					list-style: none;
-					display: inline;
-					margin: 0 auto;
-					padding: 0;
-					position: relative;
-					text-align: center;
-
-					a.link{
-						text-decoration: none;
-						color: fade(@blanco, 90%);
-						font-weight: 300;
-						}
-				}
-			}
 
 			li{
 				float: left;
@@ -341,33 +355,12 @@ body{
 
 				&.ead_bar{
 					width: auto;
-				} 
+					} 
 
 				&.ead_bar_derecha{
 					width: auto;
 					float: right;
-				}
-
-				&.ead-bar-dropdown ul {   
-					list-style-position: inside; 
-					position: absolute; 
-					background: @negro;
-					list-style-type: none;
-
-					li{
-						width: 110px; 
-						padding-top: 5px; 
-						padding-left: 1px; 
-						padding-bottom: 5px;
-						list-style-type: none;
-
-						a{
-							display: block; 
-							color: fade(@blanco, 90%);
-							padding: 0;
-						}
 					}
-				}
 
 				a{
 					text-decoration: none;
@@ -379,10 +372,6 @@ body{
 						padding: 10px 25px 0px 25px;
 						color: fade(@blanco, 90%);
 						font-weight: 300;
-						}
-
-					&.desplegable{
-						margin: 0px 10px 0px 0px;
 						}
 
 					&.iniciarsesion{ 
