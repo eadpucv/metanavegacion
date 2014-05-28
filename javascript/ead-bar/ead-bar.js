@@ -70,13 +70,25 @@
 					}
 				});
 
+				// Usuario, Menu movil
+				$("#ead-bar-dropdown_li-movil").click(function(e) {
+					if($("#ead_bar_user_menu-movil").is(':visible')) {
+						$("#ead_bar_user_menu-movil").hide();
+					} else {
+						$("#ead_bar_user_menu-movil").show();
+					}
+				});				
+
 				// Salir del menu cuando se hace click en otro punto y el menu esta abierto
 				$(document).click(function(){
 	      		if($("#ead_bar_dropdown_sub_ul").is(':visible')) {
 	          		$("#ead_bar_dropdown_sub_ul").hide();
 						$("#ead_bar_dropdown-session").removeClass( "usuario_active" ).addClass( "usuario_inactive" );
 	      		};
-	        	});				
+	        	});	
+
+	        	// Toggle menu movil
+
 
 			} else {
 				// Habilitar boton y link para iniciar session
