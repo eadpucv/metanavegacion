@@ -68,6 +68,7 @@
 						$("#ead_bar_dropdown_sub_ul").show();
 						e.stopPropagation();
 					}
+					$( "#ead-bar-dropdown_li" ).blur();
 				});
 
 				// Usuario, Menu movil
@@ -77,6 +78,7 @@
 					} else {
 						$("#ead_bar_user_menu-movil").show();
 					}
+					$( "#ead-bar-dropdown_li-movil" ).blur();
 				});				
 
 				// Salir del menu cuando se hace click en otro punto y el menu esta abierto
