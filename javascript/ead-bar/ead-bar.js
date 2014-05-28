@@ -23,8 +23,8 @@
 				
 
 				// Asigno Textos y Url's
-				$("#ead-bar-dropdown_li").prepend("<a href='#' id='ead_bar_dropdown-session' class='usuario_inactive'><img class='flecha-usuario' src='img/icon-user-arrow.gif'>"+ options.name + " " + options.lastname + "</a>");
-				$("#ead-bar-dropdown_li-movil").prepend("<a href='#' id='ead_bar_dropdown-session-movil' class='usuario_inactive'><img class='flecha-usuario' src='img/icon-user-arrow.gif'>"+ options.name + " " + options.lastname + "</a>");
+				$("#ead-bar-dropdown_li").prepend("<a href='#' id='ead_bar_dropdown-session' class='usuario_inactive'><img class='flecha-usuario' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-user-arrow.gif'>"+ options.name + " " + options.lastname + "</a>");
+				$("#ead-bar-dropdown_li-movil").prepend("<a href='#' id='ead_bar_dropdown-session-movil' class='usuario_inactive'><img class='flecha-usuario' src='https://s3.amazonaws.com/Ead/ead_bar_images/icon-user-arrow.gif'>"+ options.name + " " + options.lastname + "</a>");
 				
 				// Perfil de la Wiki
 				if (options.wikipage.length > 0) {
