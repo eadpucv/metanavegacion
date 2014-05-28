@@ -87,8 +87,6 @@
 	      		};
 	        	});	
 
-	        	// Toggle menu movil
-
 
 			} else {
 				// Habilitar boton y link para iniciar session
