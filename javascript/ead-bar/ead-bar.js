@@ -74,8 +74,10 @@
 				// Usuario, Menu movil
 				$("#ead-bar-dropdown_li-movil").click(function(e) {
 					if($("#ead_bar_user_menu-movil").is(':visible')) {
+						$("#ead_bar_dropdown-session").removeClass( "usuario_active" ).addClass( "usuario_inactive" );
 						$("#ead_bar_user_menu-movil").hide();
 					} else {
+						$("#ead_bar_dropdown-session").removeClass( "usuario_inactive" ).addClass( "usuario_active" );
 						$("#ead_bar_user_menu-movil").show();
 					}
 					$( "#ead-bar-dropdown_li-movil" ).blur();
