@@ -7,6 +7,7 @@ Barra de Meta Navegación para los servicios digitales de la e[ad]
 //Colores
 @negro: 				rgba(25, 26, 25, 1);
 @gris:                  rgba(69, 71, 71, 1);
+@gris-claro:            rgb(224,224,224);
 @blanco: 				rgba(255, 255, 255, 1);
 @rojo:					rgba(172, 70, 67, 1);
 @rojo-claro: 			rgba(199, 81, 77, 1);
@@ -76,7 +77,7 @@ body{
 					position: absolute;
 					padding: 8px 0px;
 					margin: 0 auto;
-					background: fade(@negro, 15%);
+					background: @gris-claro;
 					list-style-type: none;
 					box-shadow: 1px;
 					z-index:10000;
@@ -378,7 +379,7 @@ body{
 			padding: 8px 0px;
 			margin: 0 auto;
 			font-size: 14px;
-			background: fade(@negro, 10%);
+			background: @gris-claro;
 			list-style-type: none;
 			z-index:10000;
 			height: auto;
