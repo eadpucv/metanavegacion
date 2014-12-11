@@ -21,23 +21,32 @@ Barra de Meta Navegación para los servicios digitales de la e[ad]
 
 /*--------------------------------Barra de Meta Navegación--------------------------------*/
 
-* { 
-	box-sizing: border-box; 
+
+.metabarra,
+.metabarramovil{
+	* { 
+		box-sizing: border-box; 
 	}
 
-*:before, *:after { 
-	box-sizing: border-box; 
+	*:before, *:after { 
+		box-sizing: border-box; 
 	}
-
-body{ 
-	margin: 0 auto; 
-	}
+}
 
 .metabarramovil{ 
 	display:none; 
-	}
+}
 
 .metabarra {
+
+	* { 
+		box-sizing: border-box; 
+	}
+
+	*:before, *:after { 
+		box-sizing: border-box; 
+	}
+
 	margin: 0 auto;
 	padding: 0;
 	font-family: @sans;
@@ -123,7 +132,7 @@ body{
 				transition: .2s all ease;
 				height: @barra;
 				color: fade(@blanco, 90%);
-				font-weight: 300;
+				font-weight: 500;
 
 				&.link{
 					padding: 10px 20px 0px 40px;
@@ -207,12 +216,13 @@ body{
 			    }
 
 		    input[type='text']{
+		    	font-family: @sans;
 		    	display: inline-block;
 			    background: fade(@blanco, 10%);
 				width: 100%;
 			    border: none;
-			    font-size: 12px;
-			    font-weight: 100;
+			    font-size: 14px;
+			    font-weight: 500;
 			    vertical-align: middle;
 			    border-radius: 0;
 			    color: @blanco;
@@ -224,10 +234,10 @@ body{
 
 			    &:focus{
 			    	padding: 12px 10px 11px 30px;
-			    	background-color: fade(@blanco, 50%);
+			    	background-color: fade(@blanco, 60%);
 					border: none;
 					outline: none;
-					color: @gris;
+					color: @negro;
 					background-image: url('https://s3.amazonaws.com/Ead/ead_bar_images/icon-busqueda.gif');
 					background-position: left;
 					background-repeat: no-repeat;
